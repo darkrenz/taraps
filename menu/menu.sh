@@ -188,7 +188,7 @@ upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
-serverV=$( curl -sS https://raw.githubusercontent.com/casper9/tarap/main/menu/versi )
+serverV=$( curl -sS https://raw.githubusercontent.com/casper9/permission/main/versi)
 if [ "$Isadmin" = "ON" ]; then
 uis="${COLOR1}Premium User$NC"
 else
