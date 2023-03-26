@@ -80,7 +80,7 @@ date=$(date +"%Y-%m-%d")
 
 clear
 echo -e "[ ${green}INFO${NC} ] Create password for database"
-#read -rp "Enter Token (Contact Tarap-Kuhing) : " -e token
+#read -rp "Enter Token (Contact Casper) : " -e token
 read -rp "Enter Name File Your Backup  : " -e NameUser
 read -rp "Enter password : " -e InputPass
 sleep 1
@@ -131,7 +131,7 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 
 Save_And_Exit () {
     cd /root/user-backup
-    git config --global user.email "casper9@gmail.com" &> /dev/null
+    git config --global user.email "data.mtakbir@gmail.com" &> /dev/null
     git config --global user.name "casper9" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
@@ -153,11 +153,13 @@ Input_Data_Append
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
 echo -e ""
-echo -e "$yellow COPY Username GITHUB DI BAWAH INI$NC"
+echo -e "$yellow COPY Username & Apikey GITHUB DI BAWAH INI$NC"
 echo -e""
 echo -e "$yellow Username :👉  casper9  👈$NC"
 echo -e""
-echo -e "$yellow PASTEKAN Username GITHUB DI BAWAH INI$NC"
+echo -e "$yellow Apikey :👉  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  👈$NC"
+echo -e""
+echo -e "$yellow PASTEKAN Username & Apikey GITHUB DI BAWAH INI$NC"
 echo -e ""
 Save_And_Exit
 fi
