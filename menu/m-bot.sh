@@ -87,7 +87,7 @@ echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$COLBG1                  • BOT PANEL •                   $NC"
 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 dircreate
-[[ ! -f /root/tarap/bot.conf ]] && {
+[[ ! -f /root/casper/bot.conf ]] && {
 echo -e "
 • Status ${GREEN}Installer${NC} And ${GREEN}Running!${NC}
 "
@@ -153,7 +153,7 @@ screen -r -S "sam_bot" -X quit >/dev/null 2>&1
 [[ $(grep -wc "sam_bot" /etc/rc.local) != '0' ]] && {
 sed -i '/sam_bot/d' /etc/rc.local
 }
-rm -f /root/tarap/bot.conf
+rm -f /root/casper/bot.conf
 sleep 1
 }
 fun_bot2
