@@ -49,7 +49,7 @@ echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK BANDWITH  ${WH}   
 #echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL TCP BBR ${WH} ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}RENEW CERTV2RAY ${WH}    $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e "  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK $NC     ${WH}[${COLOR1}13${WH}]${NC} ${COLOR1}• ${WH}CLEAR RAM CACHE ${WH}    $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK $NC         ${WH}[${COLOR1}13${WH}]${NC} ${COLOR1}• ${WH}CLEAR RAM CACHE ${WH}    $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
