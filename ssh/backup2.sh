@@ -108,7 +108,7 @@ Tanggal       : $date
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 clear
-echo -e "
+echo -e " Silahkan Copy/Save link diatas"
 echo "Backup Done"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
