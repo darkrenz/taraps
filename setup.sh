@@ -152,22 +152,22 @@ wget -q https://raw.githubusercontent.com/casper9/sc/main/tools.sh;chmod +x tool
 rm tools.sh
 clear
 echo ""
-echo -e "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "               ${tyblue}         Please select a domain type below                 ${NC}"
-echo -e "               ${tyblue}└──────────────────────────────────────────┘${NC}"
-echo -e "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "               ${tyblue}           [ 1 ]  Enter your Domain                        ${NC}"
-echo -e "               ${tyblue}           [ 2 ]  Use a random Domain                      ${NC}"
-echo -e "               ${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}         Please select a domain type below                 ${NC}"
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}           [ 1 ]  Enter your Domain                        ${NC}"
+echo -e "${tyblue}           [ 2 ]  Use a random Domain                      ${NC}"
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
 read -p "   Please select numbers 1-2 or Any Button(Random) : " dns
 echo ""
 if [[ $dns == "1" ]]; then
-echo -e  "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "               ${tyblue}|              TERIMA KASIH                |${NC}"
-echo -e  "               ${tyblue}|         SUDAH MENGGUNAKAN SCRIPT         |${NC}"
-echo -e  "               ${tyblue}|                DARI SAYA                 |${NC}"
-echo -e  "               ${tyblue}|            BY C A S P E R               |${NC}"
-echo -e  "               ${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e  "${tyblue}|              TERIMA KASIH                |${NC}"
+echo -e  "${tyblue}|         SUDAH MENGGUNAKAN SCRIPT         |${NC}"
+echo -e  "${tyblue}|                DARI SAYA                 |${NC}"
+echo -e  "${tyblue}|            BY C A S P E R               |${NC}"
+echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
 read -rp "Masukan domain kamu Disini : " -e dns
 echo "$dns" > /root/domain
@@ -215,46 +215,46 @@ cat <<EOF>> /etc/casper/theme/color.conf
 blue
 EOF
 clear
-echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "                ${tyblue}|      PROCESS INSTALLED SSH & OPENVPN     |${NC}"
-echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}|      PROCESS INSTALLED SSH & OPENVPN     |${NC}"
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/casper9/tarap/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
-echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "                ${tyblue}|           PROCESS INSTALLED XRAY         |${NC}"
-echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}|           PROCESS INSTALLED XRAY         |${NC}"
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/casper9/tarap/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "                ${tyblue}|       PROCESS INSTALLED WEBSOCKET SSH    |${NC}"
-echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}|       PROCESS INSTALLED WEBSOCKET SSH    |${NC}"
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/casper9/tarap/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "                ${tyblue}|       PROCESS INSTALLED AUTOBACKUP       |${NC}"
-echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}|       PROCESS INSTALLED AUTOBACKUP       |${NC}"
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/casper9/tarap/main/ssh/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "                ${tyblue}|           PROCESS INSTALLED OHP          |${NC}"
-echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}|           PROCESS INSTALLED OHP          |${NC}"
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/casper9/tarap/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
-echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "                ${tyblue}|           DOWNLOAD EXTRA MENU            |${NC}"
-echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}|           DOWNLOAD EXTRA MENU            |${NC}"
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 2
 wget https://raw.githubusercontent.com/casper9/tarap/main/menu/update.sh && chmod +x update.sh && ./update.sh
 clear
-echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "                ${tyblue}|           DOWNLOAD SLOWDNS               |${NC}"
-echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "${tyblue}|           DOWNLOAD SLOWDNS               |${NC}"
+echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 2
 wget https://raw.githubusercontent.com/casper9/tarap/main/ssh/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 clear
@@ -279,7 +279,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/permission/main/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/casper9/permission/main/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
