@@ -107,7 +107,7 @@ echo -ne " LIMIT     : "
 read limit_pnl
 [[ -z $limit_pnl ]] && limit_pnl="1"
 echo ""
-cat <<-EOF >/root/tarap/bot.conf
+cat <<-EOF >/root/casper/bot.conf
 Botname: $bot_user
 Limit: $limit_pnl
 EOF
