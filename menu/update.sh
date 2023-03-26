@@ -63,7 +63,6 @@ wget -q -O /usr/bin/m-update "https://raw.githubusercontent.com/casper9/tarap/ma
 wget -q -O /usr/bin/slowdns "https://raw.githubusercontent.com/casper9/Slowdns/main/slowdns" && chmod +x /usr/bin/slowdns
 wget -q -O /usr/bin/backup2 "https://raw.githubusercontent.com/casper9/tarap/main/ssh/backup2.sh" && chmod +x /usr/bin/backup2
 wget -q -O /usr/bin/restore2 "https://raw.githubusercontent.com/casper9/tarap/main/ssh/restore2.sh" && chmod +x /usr/bin/restore2
-wget -q -O /opt/.ver "https://raw.githubusercontent.com/casper9/tarap/main/menu/versi" && chmod +x /opt/.ver
-echo -e " [INFO] Dwonload File Successfully"
+echo -e " [INFO] Download File Successfully"
 sleep 2
 exit
