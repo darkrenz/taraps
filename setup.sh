@@ -372,5 +372,5 @@ echo -e "                                      ${tyblue}O${NC}"
 echo  ""
 sleep 3
 echo -e "                                      ${tyblue}T${NC}"
-sleep 3
+sleep 1
 reboot
