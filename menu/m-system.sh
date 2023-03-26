@@ -38,19 +38,19 @@ echo -e "$COLOR1└────────────────────�
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}CHANGE DOMAIN   ${WH} ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}WEBMIN MENU ${WH}        $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+#echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}SPEEDTEST   ${WH}     ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}LIMIT SPEED SERVER ${WH} $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+#echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}AUTO REBOOT   ${WH}   ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}SET BANNER  ${WH}        $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}RESTART VPS   ${WH}   ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}BACKUP MENU ${WH}        $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+#echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}RESTART VPS   ${WH}   ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}SLOW DNS ${WH}        $COLOR1 $NC"
+#echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK BANDWITH  ${WH}   ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}DNS ${WH}                $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+#echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL TCP BBR ${WH} ${WH}[${COLOR1}13${WH}]${NC} ${COLOR1}• ${WH}RENEW CERTV2RAY ${WH}    $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+#echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}IP           ${WH}    ${WH}[${COLOR1}14${WH}]${NC} ${COLOR1}• ${WH}CLEAR RAM CACHE ${WH}    $COLOR1 $NC"
-echo -e "$COLOR1 ${NC}"
+#echo -e "$COLOR1 ${NC}"
 echo -e "  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
@@ -66,7 +66,7 @@ case $opt in
 08 |8) clear ; webmin ; exit ;;
 09 |9) clear ; limitspeed ; exit ;;
 10 |10) clear ; nano /etc/issue.net ;;
-11 |11) clear ; m-backup ; exit ;;
+11 |11) clear ; slowdns ; exit ;;
 12 |12) clear ; m-dns ; exit ;;
 13 |13) clear ; certv2ray ; exit ;;
 04 |14) clear ; clearcache ;;
