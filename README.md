@@ -9,13 +9,9 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 
 <h2 align="center">
 <hr>
-🚀 PERHATIAN........!!!!!!! 🚀
-<h2 align="center">
-<hr>
 🚀 SEBELUM INSTALL SCRIPT HARAP DAFTARKAN DULU IP VPS KAMU 🚀
 <h2 align="center">
 🚀 KIRIM IP VPS KE SAYA LEWAT WA DI BAWAH INI  🚀
-
 https://t.me/CasperGaming
 <h2><hr>
 <h2 align="center">
