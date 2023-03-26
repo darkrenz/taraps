@@ -5,7 +5,7 @@ apt install jq curl -y
 DOMAIN=mycasper.tech
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 #subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-dns=${sub}.mycasper.tech
+dns=*.${sub}.mycasper.tech
 #NS_dns=${subsl}.mycasper.tech
 CF_ID=data.mtakbir@gmail.com
 CF_KEY=a87d8da1122addfbc0dbb71ba4219875808c0
