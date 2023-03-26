@@ -99,11 +99,13 @@ url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
 Detail Backup
-echo -e "=================================="
-echo -e " IP VPS        : $IP"
-echo -e " Link Backup   : $link"
-echo -e " Tanggal       : $date"
-echo -e "=================================="
+echo -e "
+==================================
+IP VPS        : $IP
+Link Backup   : $link
+Tanggal       : $date
+==================================
+"
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 clear
