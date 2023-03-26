@@ -109,12 +109,7 @@ rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 clear
 echo -e "
-Detail Backup
-==================================
-IP VPS        : $IP
-Link Backup   : $link
-Tanggal       : $date
-==================================
-"
 echo "Backup Done"
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
 
