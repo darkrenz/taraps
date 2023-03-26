@@ -171,9 +171,9 @@ echo -e  "${tyblue}└───────────────────�
 echo " "
 read -rp "Masukan domain kamu Disini : " -e dns
 echo "$dns" > /root/domain
-#echo "$dns" > /root/scdomain
-#echo "$dns" > /etc/xray/scdomain
-#echo "$dns" > /etc/v2ray/scdomain
+echo "$dns" > /root/scdomain
+echo "$dns" > /etc/xray/scdomain
+echo "$dns" > /etc/v2ray/scdomain
 echo "$dns" > /etc/xray/domain
 echo "$dns" > /etc/v2ray/domain
 echo "IP=$dns" > /var/lib/ipvps.conf
