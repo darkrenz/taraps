@@ -174,7 +174,7 @@ systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• CREATE VMESS USER •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• XRAY VMESS PREMIUM •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks       ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
