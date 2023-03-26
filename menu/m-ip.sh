@@ -111,12 +111,12 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-rm -rf /root/casper
+rm -rf /root/tarap
 read -p "   NEW IPVPS : " daftar
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
-REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT/permission/main/ipmini | awk '{print $4}' | grep $daftar)
+REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini | awk '{print $4}' | grep $daftar)
 if [[ $daftar = $REQIP ]]; then
 echo -e "$COLOR1 ${NC}  [INFO] VPS IP Already Registered!!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
@@ -186,7 +186,7 @@ hariini=$(date -d "0 days" +"%Y-%m-%d")
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
 git clone https://github.com/${USERGIT}/permission.git &> /dev/null
-cd /root/casper/ &> /dev/null
+cd /root/tarap/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
 touch ipvps &> /dev/null
@@ -198,8 +198,8 @@ Exp         : $exp
 IPVPS       : $daftar 
 Reg Date    : $hariini
 " 
-#echo "${TEXT}" >>/root/casper/newuser 
-echo "### $client $exp $daftar $isadmin" >>/root/casper/ipmini
+#echo "${TEXT}" >>/root/tarap/newuser 
+echo "### $client $exp $daftar $isadmin" >>/root/tarap/ipvps
 git add .
 git commit -m register &> /dev/null
 git branch -M main &> /dev/null
@@ -219,7 +219,7 @@ echo -e "$COLOR1 ${NC}  IP VPS        : $daftar"
 echo -e "$COLOR1 ${NC}  Register Date : $hariini"
 echo -e "$COLOR1 ${NC}  Expired Date  : $exp"
 cd
-rm -rf /root/casper
+rm -rf /root/tarap
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
@@ -230,11 +230,11 @@ menu-ip
 }
 function delipvps(){
 clear
-rm -rf /root/casper &> /dev/null
+rm -rf /root/tarap &> /dev/null
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
 git clone https://github.com/${USERGIT}/permission.git &> /dev/null
-cd /root/casper/ &> /dev/null
+cd /root/tarap/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
 touch ipvps &> /dev/null
@@ -243,7 +243,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}                 ${WH}• DELETE IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 2-4 | nl -s '. '
+grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 2-4 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
@@ -266,17 +266,17 @@ read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
 fi
 
-name1=$(grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 2 | sed -n "$nombor"p) #name
-exp=$(grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 3 | sed -n "$nombor"p) #exp
-ivps1=$(grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 4 | sed -n "$nombor"p) #ip
-sed -i "s/### $name1 $exp $ivps1//g" /root/casper/ipmini &> /dev/null
+name1=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 2 | sed -n "$nombor"p) #name
+exp=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 3 | sed -n "$nombor"p) #exp
+ivps1=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 4 | sed -n "$nombor"p) #ip
+sed -i "s/### $name1 $exp $ivps1//g" /root/tarap/ipvps &> /dev/null
 hariini2=$(date -d "0 days" +"%Y-%m-%d")
 TEXTD="
 Name     : $name1
 IPVPS    : $ivps1  
 Status   : Deleted on  $hariini2
 " 
-echo "${TEXTD}" >>/root/casper/delete_log  &> /dev/null
+echo "${TEXTD}" >>/root/tarap/delete_log  &> /dev/null
 
 git add . &> /dev/null
 git commit -m remove &> /dev/null
@@ -294,7 +294,7 @@ echo -e "$COLOR1 ${NC}  Ip VPS       : $ivps1"
 echo -e "$COLOR1 ${NC}  Expired Date : $exp"
 echo -e "$COLOR1 ${NC}  Client Name  : $name1"
 cd
-rm -rf /root/casper
+rm -rf /root/tarap
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
@@ -310,17 +310,17 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-rm -rf /root/casper
+rm -rf /root/tarap
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
 git clone https://github.com/${USERGIT}/permission.git
-cd /root/casper/
+cd /root/tarap/
 rm -rf .git
 git init
 touch ipvps
 echo -e "   [ ${Lyellow}INFO${NC} ] Checking list.."
 
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/casper/ipmini")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/tarap/ipvps")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
   clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -341,7 +341,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 2-4 | nl -s '. '
+grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 2-4 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
@@ -388,9 +388,9 @@ echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
 fi
-name1=$(grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p) #name
-exp=$(grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p) #exp
-ivps1=$(grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p) #ip
+name1=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p) #name
+exp=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p) #exp
+ivps1=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p) #ip
 
 now=$(date +%Y-%m-%d)
 d1=$(date -d "$exp" +%s)
@@ -398,7 +398,7 @@ d2=$(date -d "$now" +%s)
 exp2=$(((d1 - d2) / 86400))
 exp3=$(($exp2 + $masaaktif))
 exp4=$(date -d "$exp3 days" +"%Y-%m-%d")
-sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/casper/ipvps
+sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/tarap/ipvps
 git add .
 git commit -m renew
 git branch -M main
@@ -417,7 +417,7 @@ echo -e "$COLOR1 ${NC}  Days Added    : $masaaktif Days"
 echo -e "$COLOR1 ${NC}  Expired Date  : $exp4"
 echo -e "$COLOR1 ${NC}  Client Name   : $name1"
 cd
-rm -rf /root/casper
+rm -rf /root/tarap
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
@@ -429,11 +429,11 @@ m-ip
 
 function useripvps(){
 clear
-rm -rf /root/casper
+rm -rf /root/tarap
 git config --global user.email "${EMAILGIT}"
 git config --global user.name "${USERGIT}"
 git clone https://github.com/${USERGIT}/permission.git
-cd /root/casper/
+cd /root/tarap/
 rm -rf .git
 git init
 touch ipvps
@@ -442,13 +442,13 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 2 | nl -s '. '
+grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 2 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 cd
-rm -rf /root/casper
+rm -rf /root/tarap
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -459,17 +459,17 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-rm -rf /root/casper
+rm -rf /root/tarap
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
 git clone https://github.com/${USERGIT}/permission.git
-cd /root/casper/
+cd /root/tarap/
 rm -rf .git
 git init
 touch ipvps
 echo -e "   [ ${Lyellow}INFO${NC} ] Checking list.."
 
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/casper/ipmini")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/tarap/ipvps")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
   clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -490,7 +490,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 2-4 | nl -s '. '
+grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 2-4 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
@@ -524,7 +524,7 @@ read -p "   RENEW IP : " RENEW
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
-REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini | awk '{print $4}' | grep $daftar)
+REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/jambanbkn/tarap/main/ipvps | awk '{print $4}' | grep $daftar)
 if [[ $RENEW = $ivps1 ]]; then
 cd
 clear
@@ -541,9 +541,9 @@ echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
 fi
-#name1=$(grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p) #name
-#exp=$(grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p) #exp
-ivps1=$(grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p) #ip
+#name1=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p) #name
+#exp=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p) #exp
+ivps1=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p) #ip
 
 #now=$(date +%Y-%m-%d)
 #d1=$(date -d "$exp" +%s)
@@ -551,7 +551,7 @@ ivps1=$(grep -E "^### " "/root/casper/ipmini" | cut -d ' ' -f 4 | sed -n "${CLIE
 #exp2=$(((d1 - d2) / 86400))
 #exp3=$(($exp2 + $masaaktif))
 #exp4=$(date -d "$exp3 days" +"%Y-%m-%d")
-sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/caspee/ipmini
+sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/tarap/ipvps
 git add .
 git commit -m renew
 git branch -M main
@@ -570,7 +570,7 @@ echo -e "$COLOR1 ${NC}  Days Added    : $masaaktif Days"
 echo -e "$COLOR1 ${NC}  Expired Date  : $exp4"
 echo -e "$COLOR1 ${NC}  Client Name   : $name1"
 cd
-rm -rf /root/casper
+rm -rf /root/tarap
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
@@ -599,7 +599,7 @@ echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip  
 }
-Isadmin=$(curl -sS https://raw.githubusercontent.com/permission/main/ipmini | grep $MYIP | awk '{print $5}')
+Isadmin=$(curl -sS https://raw.githubusercontent.com/jambanbkn/tarap/main/ipvps | grep $MYIP | awk '{print $5}')
 if [ "$Isadmin" = "OFF" ]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -608,7 +608,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} [INFO] Only PRO Users Can Use This Panel"
 echo -e "$COLOR1 ${NC} [INFO] Buy Premium Membership : "
-echo -e "$COLOR1 ${NC} [INFO] PM : https://wa.me/085754292950"
+echo -e "$COLOR1 ${NC} [INFO] PM : https://t.me/casperinject"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
