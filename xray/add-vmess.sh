@@ -101,15 +101,15 @@ clear
 v2ray-menu
 		fi
 	done
-#read -p "   Bug Host : " address
+read -p "   Bug Host : " address
 read -p "   Bug SNI/Host : " sni
 
-#bug_addr=${address}.
-#bug_addr2=$address
-#if [[ $address == "" ]]; then
-#bug.com=$bug_addr2
-#else
-#bug.com=$bug_addr
+bug_addr=${address}.
+bug_addr2=$address
+if [[ $address == "" ]]; then
+bug.com=$bug_addr2
+else
+bug.com=$bug_addr
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
