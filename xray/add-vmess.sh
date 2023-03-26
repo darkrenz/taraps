@@ -74,7 +74,7 @@ cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 if [ "$cekray" = "XRAY" ]; then
 domain=`cat /etc/xray/domain`
 else
-domain=`cat /root/domain`
+domain=`cat /etc/v2ray/domain`
 fi
 
 tls="$(cat ~/log-install.txt | grep -w "Vmess WS TLS" | cut -d: -f2|sed 's/ //g')"
