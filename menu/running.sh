@@ -392,3 +392,5 @@ echo -e "$COLOR1 ${NC}                ${WH}♤ PREMIUM ♤ ${NC}                
 echo -e "$COLOR1 ${NC}                ${WH}◇   BY   ◇ ${NC}                    $COLOR1 $NC"
 echo -e "$COLOR1 ${NC}             ${WH}♡ C A S P E R ♡ ${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└───────────────────────────────────────────────────┘${NC}"
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
