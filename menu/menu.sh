@@ -221,7 +221,6 @@ echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}VMESS   ${WH}[${COLOR1
 echo -e "  ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}VLESS   ${WH}[${COLOR1}${status_xray}${WH}]    ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}THEME   ${WH}[${COLOR1}Menu${WH}] $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}SS WS   ${WH}[${COLOR1}${status_xray}${WH}]    ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}SYSTEM  ${WH}[${COLOR1}Menu${WH}] $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TROJAN  ${WH}[${COLOR1}ON${WH}]    ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}SLOWDNS ${WH}[${COLOR1}Menu${WH}]             $COLOR1 $NC"
-echo -e "  ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}IP  ${WH}[${COLOR1}MENU${WH}]    ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}BOT ${WH}[${COLOR1}Menu${WH}]             $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• Terima Kasih Sudah Mengguanakan Script Ini •${NC}  $COLOR1 $NC"
