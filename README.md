@@ -55,17 +55,3 @@ https://t.me/CasperGaming
 ⏩ Trojan WS none TLS      : 80 ⏪<br>
 ⏩ Shadowsocks WS none TLS : 80 ⏪<br>
 <br>
-<br>
-  <h2 align="center">
-<h2 align="center">
-## ⏩ AUTOSCRIPT MULLTIPORT 443 ⏪
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
