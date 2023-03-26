@@ -180,11 +180,11 @@ echo "IP=$dns" > /var/lib/ipvps.conf
 echo ""
 clear
 elif [[ $dns == "2" ]]; then
-wget https://raw.githubusercontent.com/casper9/permission/main/casper.sh && chmod +x casper.sh && ./casper.sh
+wget https://raw.githubusercontent.com/casper9/tarap/main/ssh/casper.sh && chmod +x casper.sh && ./casper.sh
 clear
 else
 echo -e "Random Subdomain/Domain is used"
-wget https://raw.githubusercontent.com/casper9/permission/main/casper.sh && chmod +x casper.sh && ./casper.sh
+wget https://raw.githubusercontent.com/casper9/tarap/main/ssh/casper.sh && chmod +x casper.sh && ./casper.sh
 clear
 fi
 cat <<EOF>> /etc/casper/theme/red
