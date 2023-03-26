@@ -101,7 +101,7 @@ clear
 		fi
 	done
 #read -p "   Bug Host : " address
-read -p "   Bug SNI/Host : " sni
+#read -p "   Bug SNI/Host : " sni
 
 #bug_addr=${address}.
 #bug_addr2=$address
