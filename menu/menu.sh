@@ -200,7 +200,7 @@ else
 echo -e "$COLOR1 $NC ${WH}System Uptime     ${COLOR1}: ${WH}$uphours $upminutes"
 fi
 echo -e "$COLOR1 $NC ${WH}Memory Usage      ${COLOR1}: ${WH}$uram / $tram"
-echo -e "$COLOR1 $NC ${WH}ISP & City        ${COLOR1}: ${WH}$ISP & $CITY"
+#echo -e "$COLOR1 $NC ${WH}ISP & City        ${COLOR1}: ${WH}$ISP & $CITY"
 echo -e "$COLOR1 $NC ${WH}Current Domain    ${COLOR1}: ${WH}$(cat /etc/xray/domain)"
 echo -e "$COLOR1 $NC ${WH}Nameserver Slowdns${COLOR1}: ${WH}$(cat /root/nsdomain)"
 echo -e "$COLOR1 $NC ${WH}IP-VPS            ${COLOR1}: ${WH}$IPVPS${NC}"
@@ -269,7 +269,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1 ${NC}                 ${WH}• SEWA SCRIPT •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1 ${NC}                  ${WH}• PREMIUM •${NC}                    $COLOR1 $NC"
-echo -e "$COLOR1 ${NC}             ${WH}• TELE : https/t.me/CasperGaming •${NC}             $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}      ${WH}• TELE : https/t.me/CasperGaming •${NC}             $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
