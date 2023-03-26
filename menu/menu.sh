@@ -164,9 +164,8 @@ wget -q -O /root/install_up.sh "https://raw.githubusercontent.com/casper9/tarap/
 sleep 2
 ./install_up.sh
 sleep 5
-rm /root/install_up.sh
 rm /opt/.ver
-version_up=$( curl -sS https://raw.githubusercontent.com/casper9/permission/main/versi)
+version_up=$( curl -sS https://raw.githubusercontent.com/casper9/permission/main/version)
 echo "$version_up" > /opt/.ver
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Successfully Up To Date!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
