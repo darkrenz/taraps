@@ -98,7 +98,7 @@ clear
 			v2ray-menu
 		fi
 	done
-read -p "   Bug SNI/Host : " sni
+#read -p "   Bug SNI/Host : " sni
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
