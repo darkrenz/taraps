@@ -116,7 +116,7 @@ read -p "   NEW IPVPS : " daftar
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
-REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini | awk '{print $4}' | grep $daftar)
+REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/jambanbkn/tarap/main/ipvps | awk '{print $4}' | grep $daftar)
 if [[ $daftar = $REQIP ]]; then
 echo -e "$COLOR1 ${NC}  [INFO] VPS IP Already Registered!!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
@@ -185,7 +185,7 @@ exp=$(date -d "$exp days" +"%Y-%m-%d")
 hariini=$(date -d "0 days" +"%Y-%m-%d")
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/permission.git &> /dev/null
+git clone https://github.com/${USERGIT}/tarap.git &> /dev/null
 cd /root/tarap/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
@@ -203,8 +203,8 @@ echo "### $client $exp $daftar $isadmin" >>/root/tarap/ipvps
 git add .
 git commit -m register &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/${USERGIT}/permission.git &> /dev/null
-git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git &> /dev/null
+git remote add origin https://github.com/${USERGIT}/tarap.git &> /dev/null
+git push -f https://${APIGIT}@github.com/${USERGIT}/tarap.git &> /dev/null
 sleep 1
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -222,7 +222,7 @@ cd
 rm -rf /root/tarap
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHINH •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -233,7 +233,7 @@ clear
 rm -rf /root/tarap &> /dev/null
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/permission.git &> /dev/null
+git clone https://github.com/${USERGIT}/tarap.git &> /dev/null
 cd /root/tarap/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
@@ -281,8 +281,8 @@ echo "${TEXTD}" >>/root/tarap/delete_log  &> /dev/null
 git add . &> /dev/null
 git commit -m remove &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/${USERGIT}/permission.git &> /dev/null
-git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git &> /dev/null
+git remote add origin https://github.com/${USERGIT}/tarap.git &> /dev/null
+git push -f https://${APIGIT}@github.com/${USERGIT}/tarap.git &> /dev/null
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
@@ -313,7 +313,7 @@ echo -e "$COLOR1┌────────────────────�
 rm -rf /root/tarap
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/permission.git
+git clone https://github.com/${USERGIT}/tarap.git
 cd /root/tarap/
 rm -rf .git
 git init
@@ -402,8 +402,8 @@ sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/tarap/ipvps
 git add .
 git commit -m renew
 git branch -M main
-git remote add origin https://github.com/${USERGIT}/permission.git
-git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git
+git remote add origin https://github.com/${USERGIT}/tarap.git
+git push -f https://${APIGIT}@github.com/${USERGIT}/tarap.git
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
@@ -432,7 +432,7 @@ clear
 rm -rf /root/tarap
 git config --global user.email "${EMAILGIT}"
 git config --global user.name "${USERGIT}"
-git clone https://github.com/${USERGIT}/permission.git
+git clone https://github.com/${USERGIT}/tarap.git
 cd /root/tarap/
 rm -rf .git
 git init
@@ -462,7 +462,7 @@ echo -e "$COLOR1┌────────────────────�
 rm -rf /root/tarap
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/permission.git
+git clone https://github.com/${USERGIT}/tarap.git
 cd /root/tarap/
 rm -rf .git
 git init
@@ -555,8 +555,8 @@ sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/tarap/ipvps
 git add .
 git commit -m renew
 git branch -M main
-git remote add origin https://github.com/${USERGIT}/permission.git
-git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git
+git remote add origin https://github.com/${USERGIT}/tarap.git
+git push -f https://${APIGIT}@github.com/${USERGIT}/tarap.git
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
@@ -608,7 +608,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} [INFO] Only PRO Users Can Use This Panel"
 echo -e "$COLOR1 ${NC} [INFO] Buy Premium Membership : "
-echo -e "$COLOR1 ${NC} [INFO] PM : https://t.me/casperinject"
+echo -e "$COLOR1 ${NC} [INFO] PM : https://wa.me/085754292950"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
