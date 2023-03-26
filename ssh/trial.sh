@@ -142,8 +142,8 @@ echo -e "$COLOR1 $NC  ${WH}PORT SLWDNS${COLOR1}: ${WH}22,80,8080,8880,443,8443"
 echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"
 echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$nameserver"
 echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey"
-echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$nameserver1"
-echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
+#echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$nameserver1"
+#echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
@@ -154,7 +154,7 @@ echo -e "$COLOR1 ${NC}  ${WH}           Payload WS                   ${NC}" | te
 echo -e "$COLOR1 ${NC}  ${WH}GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}                ${WH}• t.me/casperinject •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 else
 
@@ -188,8 +188,8 @@ echo -e "$COLOR1 $NC  ${WH}PORT SLWDNS${COLOR1}: ${WH}22,80,8080,8880,443,8443"
 echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"
 echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$nameserver"
 echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey"
-echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$nameserver1"
-echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
+#echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$nameserver1"
+#echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
@@ -200,7 +200,7 @@ echo -e "$COLOR1 ${NC}  ${WH}           Payload WS                   ${NC}" | te
 echo -e "$COLOR1 ${NC}  ${WH}GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}                ${WH}• t.me/casperinject •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 fi
 echo ""
