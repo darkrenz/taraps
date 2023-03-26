@@ -270,11 +270,11 @@ echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}BACKUP VP
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}RESTORE VPS github  $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}BACKUP2 VPS  $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}AUTOBACKUP VPS  $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}AUTOBACKUP2 VPS  $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}BACKUP VPS  $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}RESTORE2 VPS  $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}RESTORE VPS  $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
@@ -287,8 +287,8 @@ echo -e ""
 case $opt in
 01 | 1) clear ; backup ;;
 02 | 2) clear ; restore ;;
-03 | 3) clear ; backup2 ;;
-04 | 4) clear ; autobackup ;;
+03 | 3) clear ; autobackup ;;
+04 | 4) clear ; backup2 ;;
 04 | 5) clear ; restore2 ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
