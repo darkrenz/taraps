@@ -69,6 +69,15 @@ red "Permission Denied!"
 exit 0
 fi
 clear
+
+cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
+if [ "$cekray" = "XRAY" ]; then
+domainlama=`cat /etc/xray/domain`
+else
+domainlama=`cat /etc/v2ray/domain`
+fi
+
+clear
 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e "$COLBG1               • RENEW DOMAIN SSL •               $NC"
 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
