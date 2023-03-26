@@ -74,7 +74,7 @@ cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 if [ "$cekray" = "XRAY" ]; then
 domain=`cat /etc/xray/domain`
 else
-domain=`cat /etc/v2ray/domain`
+domain=`cat /root/domain`
 fi
 
 tls="$(cat ~/log-install.txt | grep -w "Vmess WS TLS" | cut -d: -f2|sed 's/ //g')"
@@ -188,7 +188,7 @@ echo -e "$COLOR1 ${NC} ${WH}alterId       ${COLOR1}: ${WH}0" | tee -a /etc/log-c
 echo -e "$COLOR1 ${NC} ${WH}Security      ${COLOR1}: ${WH}auto" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Network       ${COLOR1}: ${WH}ws" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Path          ${COLOR1}: ${WH}/vmess" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Path Support  ${COLOR1}: ${WH}http://tsel.me/worryfree" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${WH}Path Support  ${COLOR1}: ${WH}/worryfree" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}ServiceName   ${COLOR1}: ${WH}vmess-grpc" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
