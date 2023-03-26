@@ -200,7 +200,7 @@ else
 echo -e "$COLOR1 $NC ${WH}System Uptime     ${COLOR1}: ${WH}$uphours $upminutes"
 fi
 echo -e "$COLOR1 $NC ${WH}Memory Usage      ${COLOR1}: ${WH}$uram / $tram"
-echo -e "$COLOR1 $NC ${WH}ISP & City        ${COLOR1}: ${WH}$ISP & $CITY"
+#echo -e "$COLOR1 $NC ${WH}ISP & City        ${COLOR1}: ${WH}$ISP & $CITY"
 echo -e "$COLOR1 $NC ${WH}Current Domain    ${COLOR1}: ${WH}$(cat /etc/xray/domain)"
 echo -e "$COLOR1 $NC ${WH}Nameserver Slowdns${COLOR1}: ${WH}$(cat /root/nsdomain)"
 echo -e "$COLOR1 $NC ${WH}IP-VPS            ${COLOR1}: ${WH}$IPVPS${NC}"
