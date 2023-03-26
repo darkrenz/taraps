@@ -219,7 +219,7 @@ echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSHWS   ${WH}[${COLOR1
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}VMESS   ${WH}[${COLOR1}${status_xray}${WH}]    ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}UPDATE  ${WH}[${COLOR1}Menu${WH}] $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}VLESS   ${WH}[${COLOR1}${status_xray}${WH}]    ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}THEME   ${WH}[${COLOR1}Menu${WH}] $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}SS WS   ${WH}[${COLOR1}${status_xray}${WH}]    ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}SYSTEM  ${WH}[${COLOR1}Menu${WH}] $COLOR1 $NC"
-echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TROJAN  ${WH}[${COLOR1}ON${WH}]"
+echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TROJAN  ${WH}[${COLOR1}ON${WH}]    ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}BACKUP  ${WH}[${COLOR1}Menu${WH}]             $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• Terima Kasih Sudah Mengguanakan Script Ini •${NC}  $COLOR1 $NC"
@@ -283,7 +283,7 @@ case $opt in
 07 | 7) clear ; m-update ;;
 08 | 8) clear ; m-theme ;;
 19 | 9) clear ; m-system ;;
-10 | 10) clear ; slowdns ;;
+10 | 10) clear ; m-backup;;
 11 | 11) clear ; $ressee ;;
 12 | 12) clear ; $bottt ;;
 
