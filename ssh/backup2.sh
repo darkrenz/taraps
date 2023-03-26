@@ -75,6 +75,15 @@ clear
 IP=$(wget -qO- ipinfo.io/ip);
 date=$(date +"%Y-%m-%d")
 clear
+email=$(cat /home/email)
+if [[ "$email" = "" ]]; then
+echo "Masukkan Email Untuk Menerima Backup"
+read -rp "Email : " -e email
+cat <<EOF>>/home/email
+$email
+EOF
+fi
+clear
 echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
 rm -rf /root/backup
 mkdir /root/backup
@@ -98,19 +107,27 @@ rclone copy /root/$IP-$date.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
-Detail Backup
 echo -e "
+Detail Backup
+==================================
+IP VPS        : $IP
+Link Backup   : $link
+Tanggal       : $date
+==================================
+" | mail -s "Backup Data" $email
+rm -rf /root/backup
+rm -r /root/$IP-$date.zip
+clear
+echo -e "
+Detail Backup
 ==================================
 IP VPS        : $IP
 Link Backup   : $link
 Tanggal       : $date
 ==================================
 "
-rm -rf /root/backup
-rm -r /root/$IP-$date.zip
-clear
-echo -e "Silahkan Copy/Save link diatas"
-echo -e "Backup Done"
+echo "Jangan Lupa Dicopy/salin link diatas"
+echo "Silahkan cek Kotak Masuk $email"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 
