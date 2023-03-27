@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <h2 align="center">
 🚀 Installation Script By CASPER 🚀<br>
-
-  ```html
-apt-get update && apt-get upgrade -y && reboot
-
-  ```
 </b>
 
   ```html
