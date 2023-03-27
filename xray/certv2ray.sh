@@ -69,6 +69,14 @@ red "Permission Denied!"
 exit 0
 fi
 clear
+cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
+if [ "$cekray" = "XRAY" ]; then
+domainlama=`cat /etc/xray/domain`
+else
+domainlama=`cat /etc/xray/domain`
+fi
+
+clear
 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e "$COLBG1               • RENEW DOMAIN SSL •               $NC"
 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
@@ -88,10 +96,9 @@ sleep 1
 fi
 echo -e "[ ${green}INFO${NC} ] Starting renew cert... "
 sleep 2
-/root/.acme.sh/acme.sh --upgrade --auto-upgrade
 /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
-~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /usr/local/etc/xray/xray.crt --keypath /usr/local/etc/xray/xray.key --ecc
+~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
 echo -e "[ ${green}INFO${NC} ] Renew cert done... "
 sleep 2
 echo -e "[ ${green}INFO${NC} ] Starting service $Cek "
