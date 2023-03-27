@@ -74,13 +74,13 @@ mkdir -p /etc/nsdomain
 touch /etc/xray/domain
 touch /etc/v2ray/domain
 touch /etc/xray/slwdomain
-#touch /etc/v2ray/scdomain
-echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
-sleep 0.5
-echo -e "[ ${tyblue}NOTES${NC} ] I need check your headers first.."
-sleep 0.5
-echo -e "[ ${tyblue}INFO${NC} ] Checking headers"
-sleep 0.5
+touch /etc/v2ray/scdomain
+#echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
+#sleep 0.5
+#echo -e "[ ${tyblue}NOTES${NC} ] I need check your headers first.."
+#sleep 0.5
+#echo -e "[ ${tyblue}INFO${NC} ] Checking headers"
+#sleep 0.5
 secs_to_human() {
 echo "Installation time : $(( ${1} / 3600 )) hours $(( (${1} / 60) % 60 )) minute's $(( ${1} % 60 )) seconds"
 }
