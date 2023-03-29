@@ -89,6 +89,8 @@ read -n 1 -s -r -p "  Press any key to back on menu"
 menu
 else
 echo "IP=$dns" > /var/lib/ipvps.conf
+echo "$dns" > /etc/xray/domain
+echo "$dns" > /etc/v2ray/domain
 echo ""
 echo "  [INFO] Dont forget to renew cert"
 echo ""
