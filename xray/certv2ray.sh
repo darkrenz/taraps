@@ -7,6 +7,7 @@ NC="\e[0m"
 RED="\033[0;31m"
 COLOR1="$(cat /etc/casper/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
 COLBG1="$(cat /etc/casper/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
 BURIQ () {
@@ -54,7 +55,7 @@ PERMISSION () {
     BURIQ
 }
 red='\e[1;31m'
-green='\e[0;32m'
+green='\e[1;32m'
 NC='\e[0m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
@@ -69,47 +70,21 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
-if [ "$cekray" = "XRAY" ]; then
-domainlama=`cat /etc/xray/domain`
-else
-domainlama=`cat /etc/xray/domain`
-fi
-
-clear
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo -e "$COLBG1               • RENEW DOMAIN SSL •               $NC"
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo -e ""
-echo -e "[ ${green}INFO${NC} ] Start "
+echo start
 sleep 0.5
+source /var/lib/ipvps.conf
+domain=$(cat /etc/xray/domain)
 systemctl stop nginx
-domain=$(cat /var/lib/ipvps.conf | cut -d'=' -f2)
-Cek=$(lsof -i:80 | cut -d' ' -f1 | awk 'NR==2 {print $1}')
-if [[ ! -z "$Cek" ]]; then
-sleep 1
-echo -e "[ ${red}WARNING${NC} ] Detected port 80 used by $Cek "
-systemctl stop $Cek
-sleep 2
-echo -e "[ ${green}INFO${NC} ] Processing to stop $Cek "
-sleep 1
-fi
-echo -e "[ ${green}INFO${NC} ] Starting renew cert... "
-sleep 2
-/root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
-/root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
-~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
-echo -e "[ ${green}INFO${NC} ] Renew cert done... "
-sleep 2
-echo -e "[ ${green}INFO${NC} ] Starting service $Cek "
-sleep 2
-echo $domain > /etc/xray/domain
-systemctl restart $Cek
+sudo lsof -t -i tcp:89 -s tcp:listen | sudo xargs kill
+cd /root/
+wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
+bash acme.sh --install
+rm acme.sh
+cd .acme.sh
+echo "starting...., Port 89 Akan di Hentikan Saat Proses install Cert"
+bash acme.sh --register-account -m data.mtakbir@gmail.com
+bash acme.sh --issue --standalone -d $domain --force
+bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 systemctl restart nginx
-echo -e "[ ${green}INFO${NC} ] All finished... "
-sleep 0.5
-echo ""
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
+systemctl restart xray
 menu
