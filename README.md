@@ -12,7 +12,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 
 <pre><code>sudo su
 cd
-wget https://raw.githubusercontent.com/casper9/casperv1/main/vpsroot.sh && chmod +x vpsroot.sh && ./vpsroot.sh
+wget https://raw.githubusercontent.com/casper9/tarap/main/vpsroot.sh && chmod +x vpsroot.sh && ./vpsroot.sh
 
 </code></pre>
 
