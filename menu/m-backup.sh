@@ -2,12 +2,12 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /casper/theme/theme/color.conf)
+colornow=$(cat etc/casper/theme/theme/color.conf)
 export NC="\e[0m"
 export YELLOW='\033[0;33m';
 export RED="\033[0;31m"
-export COLOR1="$(cat /casper/theme/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-export COLBG1="$(cat /casper/theme/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+export COLOR1="$(cat etc/casper/theme/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+export COLBG1="$(cat etc/casper/theme/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
 WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
@@ -81,8 +81,8 @@ clear
 echo -e "[ ${green}INFO${NC} ] Create for database"
 #read -rp "Enter Token (Creat on Botfather) : " -e token
 #read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
-echo -e "toket=6200482478:AAFnIWLNrexbtuwgPR9J-4AXvuII7TcGNZw" >> /root/botapi.conf
-echo -e "chat_idc=847645599" >> /root/botapi.conf
+echo -e "toket=5994877932:AAENR9Ir0wmHav6XmZK_kDZQsIT8I7KWRh0" >> /root/botapi.conf
+echo -e "chat_idc=481473615" >> /root/botapi.conf
 sleep 1
 clear
 echo -e "[ ${green}INFO${NC} ] Processing... "
