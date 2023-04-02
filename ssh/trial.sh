@@ -117,13 +117,14 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SSH Account •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}Username   ${COLOR1}: ${WH}$Login"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+cho -e "$COLOR1 $NC  ${WH}Username   ${COLOR1}: ${WH}$Login"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}Password   ${COLOR1}: ${WH}$Pass" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}Expired On ${COLOR1}: ${WH}$exp"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}ISP       ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}City      ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}IP         ${COLOR1}: ${WH}$IP" | tee -a /etc/log-create-user.log
@@ -142,31 +143,37 @@ echo -e "$COLOR1 $NC  ${WH}OVPN TCP   ${COLOR1}: ${WH}http://$IP:89/tcp.ovpn" | 
 echo -e "$COLOR1 $NC  ${WH}OVPN UDP   ${COLOR1}: ${WH}http://$IP:89/udp.ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}OVPN SSL   ${COLOR1}: ${WH}http://$IP:89/ssl.ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}PORT SLWDNS${COLOR1}: ${WH}22,80,8080,8880,443,8443"
 echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"
 echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$nameserver"
 echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey"
 #echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$nameserver1"
 #echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}GET wss://bug.com HTTP/1.1[crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}           Payload WS                   ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}           ${WH}• t.me/casperinject •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 else
 
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• SSH Account •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}Username   ${COLOR1}: ${WH}$Login"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}Password   ${COLOR1}: ${WH}$Pass" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}Expired On ${COLOR1}: ${WH}$exp"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}ISP       ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}City      ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}IP         ${COLOR1}: ${WH}$IP" | tee -a /etc/log-create-user.log
@@ -185,22 +192,26 @@ echo -e "$COLOR1 $NC  ${WH}OVPN TCP   ${COLOR1}: ${WH}http://$IP:89/tcp.ovpn" | 
 echo -e "$COLOR1 $NC  ${WH}OVPN UDP   ${COLOR1}: ${WH}http://$IP:89/udp.ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}OVPN SSL   ${COLOR1}: ${WH}http://$IP:89/ssl.ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ───────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}PORT SLWDNS${COLOR1}: ${WH}22,80,8080,8880,443,8443"
 echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"
 echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$nameserver"
 echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey"
 #echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$nameserver1"
 #echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
-echo -e "$COLOR1 ──────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}GET wss://bug.com HTTP/1.1[crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ──────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}           Payload WS                   ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ──────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}${WH}• t.me/casperinject •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ──────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 fi
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
