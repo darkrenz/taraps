@@ -125,8 +125,8 @@ echo -e "$COLOR1 $NC  ${WH}Password   ${COLOR1}: ${WH}$Pass" | tee -a /etc/log-c
 echo -e "$COLOR1 $NC  ${WH}Expired On ${COLOR1}: ${WH}$exp"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}ISP       ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}City      ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC  ${WH}ISP        ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC  ${WH}City       ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}IP         ${COLOR1}: ${WH}$IP" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}Host       ${COLOR1}: ${WH}$domen" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 $NC  ${WH}Wildcard   ${COLOR1}: ${WH}(bug.com).$domen" | tee -a /etc/log-create-user.log
@@ -174,8 +174,8 @@ echo -e "$COLOR1 $NC  ${WH}Password   ${COLOR1}: ${WH}$Pass" | tee -a /etc/log-c
 echo -e "$COLOR1 $NC  ${WH}Expired On ${COLOR1}: ${WH}$exp"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}ISP       ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}City      ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC  ${WH}ISP        ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC  ${WH}City       ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}IP         ${COLOR1}: ${WH}$IP" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}Host       ${COLOR1}: ${WH}$domen" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 $NC  ${WH}Wildcard   ${COLOR1}: ${WH}(bug.com).$domen" | tee -a /etc/log-create-user.log
