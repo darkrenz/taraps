@@ -127,11 +127,11 @@ clear
 clear
 clear
 clear
-echo -e "$COLOR1 ─────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLBG1} ${WH}• XRAY TROJAN PREMIUM •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ─────────────────────${NC}"
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1 ─────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks      ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}ISP          ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}City         ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
@@ -143,23 +143,23 @@ echo -e "$COLOR1 ${NC} ${WH}Port gRPC    ${COLOR1}: ${WH}${tls}" | tee -a /etc/l
 echo -e "$COLOR1 ${NC} ${WH}Key          ${COLOR1}: ${WH}${uuid}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Path         ${COLOR1}: ${WH}/trojan-ws" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}ServiceName  ${COLOR1}: ${WH}trojan-grpc" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ─────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1 ─────────────────────${NC}"
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Link TLS     ${COLOR1}: ${WH}${trojanlink}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ─────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1 ─────────────────────${NC}"
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Link gRPC    ${COLOR1}: ${WH}${trojanlink1}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ─────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1 ─────────────────────${NC}"
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Expired On   ${COLOR1}: ${WH}$exp"            | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ─────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1 ─────────────────────${NC}"
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}• t.me/casperinject •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1 ─────────────────────${NC}"
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
