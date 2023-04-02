@@ -70,6 +70,8 @@ red "Permission Denied!"
 exit 0
 fi
 clear
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
 domain=$(cat /etc/xray/domain)
 tls="$(cat ~/log-install.txt | grep -w "Vmess WS TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess WS none TLS" | cut -d: -f2|sed 's/ //g')"
@@ -141,11 +143,13 @@ clear
 clear
 clear
 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• TRIAL VMESS •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• TRIAL VMESS •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks       ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${WH}ISP           ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${WH}City          ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Domain        ${COLOR1}: ${WH}${domain}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 ${NC} ${WH}Wildcard      ${COLOR1}: ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Port TLS      ${COLOR1}: ${WH}${tls}" | tee -a /etc/log-create-user.log
@@ -158,30 +162,30 @@ echo -e "$COLOR1 ${NC} ${WH}Network       ${COLOR1}: ${WH}ws" | tee -a /etc/log-
 echo -e "$COLOR1 ${NC} ${WH}Path          ${COLOR1}: ${WH}/vmess" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Path Support  ${COLOR1}: ${WH}http://bug.com/worryfree" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}ServiceName   ${COLOR1}: ${WH}vmess-grpc" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket TLS      ${WH}:${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}${vmesslink1}${NC}"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket None TLS ${WH}: ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}${vmesslink2}${NC}"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket GRPC     ${WH}: ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}${vmesslink3}${NC}"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Expired On     ${COLOR1}: ${WH}$exp" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}           ${WH}• t.me/casperinject •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}${WH}• t.me/casperinject •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
