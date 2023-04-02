@@ -75,7 +75,7 @@ sleep 0.5
 source /var/lib/ipvps.conf
 domain=$(cat /etc/xray/domain)
 systemctl stop nginx
-sudo lsof -t -i tcp:89 -s tcp:listen | sudo xargs kill
+#sudo lsof -t -i tcp:89 -s tcp:listen | sudo xargs kill
 cd /root/
 wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 bash acme.sh --install
