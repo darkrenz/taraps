@@ -12,8 +12,8 @@ WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 tram=$( free -h | awk 'NR==2 {print $2}' )
 uram=$( free -h | awk 'NR==2 {print $3}' )
-ISP=$(curl -s b3d3519c9991d1: ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s b3d3519c9991d1: ipinfo.io/city )
+ISP=$(curl -s ipinfo.io/org?token=b3d3519c9991d1 | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city?token=b3d3519c9991d1 )
 
 
 BURIQ () {
