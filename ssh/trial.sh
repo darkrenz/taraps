@@ -82,8 +82,8 @@ nameserver1=`cat /etc/slowdns/infons`
 slkey1=`cat /root/server.pub`
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city )
+ISP=$(curl -s ipinfo.io/org?token=b3d3519c9991d1 | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city?token=b3d3519c9991d1 )
 
 clear
 IP=$(curl -sS ifconfig.me);
