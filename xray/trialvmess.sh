@@ -73,7 +73,7 @@ clear
 domain=$(cat /etc/xray/domain)
 tls="$(cat ~/log-install.txt | grep -w "Vmess WS TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess WS none TLS" | cut -d: -f2|sed 's/ //g')"
-user=♡casper9♡`</dev/urandom tr -dc X-Z0-9 | head -c4`
+user=trialcasper`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
@@ -136,7 +136,10 @@ vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-
+clear
+clear
+clear
+clear
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• TRIAL VMESS •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
@@ -144,7 +147,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks       ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Domain        ${COLOR1}: ${WH}${domain}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Wildcard      ${COLOR1}: ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
+#echo -e "$COLOR1 ${NC} ${WH}Wildcard      ${COLOR1}: ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Port TLS      ${COLOR1}: ${WH}${tls}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Port none TLS ${COLOR1}: ${WH}80,8080" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Port gRPC     ${COLOR1}: ${WH}${tls}" | tee -a /etc/log-create-user.log
@@ -153,7 +156,7 @@ echo -e "$COLOR1 ${NC} ${WH}alterId       ${COLOR1}: ${WH}0" | tee -a /etc/log-c
 echo -e "$COLOR1 ${NC} ${WH}Security      ${COLOR1}: ${WH}auto" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Network       ${COLOR1}: ${WH}ws" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Path          ${COLOR1}: ${WH}/vmess" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Path Support  ${COLOR1}: ${WH}/worryfree" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${WH}Path Support  ${COLOR1}: ${WH}http://bug.com/worryfree" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}ServiceName   ${COLOR1}: ${WH}vmess-grpc" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
@@ -176,8 +179,8 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${WH}Expired On     ${COLOR1}: ${WH}$exp" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}                ${WH}• BY C A S P E R •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}           ${WH}• t.me/casperinject •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
