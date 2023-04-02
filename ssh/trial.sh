@@ -97,7 +97,7 @@ OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{prin
 OhpDB=`cat /root/log-install.txt | grep -w "OHP DBear" | cut -d: -f2 | awk '{print $1}'`
 OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
 
-Login=♡CASPER♡`</dev/urandom tr -dc X-Z0-9 | head -c4`
+Login=trialcasper`</dev/urandom tr -dc X-Z0-9 | head -c4`
 hari="1"
 Pass=1
 echo Ping Host
@@ -139,7 +139,7 @@ echo -e "$COLOR1 $NC  ${WH}Port SSL   ${COLOR1}: ${WH}990" | tee -a /etc/log-cre
 echo -e "$COLOR1 $NC  ${WH}OVPN TCP   ${COLOR1}: ${WH}http://$IP:89/tcp.ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}OVPN UDP   ${COLOR1}: ${WH}http://$IP:89/udp.ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}OVPN SSL   ${COLOR1}: ${WH}http://$IP:89/ssl.ovpn" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7900" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}PORT SLWDNS${COLOR1}: ${WH}22,80,8080,8880,443,8443"
@@ -186,7 +186,7 @@ echo -e "$COLOR1 $NC  ${WH}Port SSL   ${COLOR1}: ${WH}990" | tee -a /etc/log-cre
 echo -e "$COLOR1 $NC  ${WH}OVPN TCP   ${COLOR1}: ${WH}http://$IP:89/tcp.ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}OVPN UDP   ${COLOR1}: ${WH}http://$IP:89/udp.ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}OVPN SSL   ${COLOR1}: ${WH}http://$IP:89/ssl.ovpn" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7900" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}PORT SLWDNS${COLOR1}: ${WH}22,80,8080,8880,443,8443"
