@@ -123,7 +123,8 @@ echo -e "$COLOR1 ─────────────────────
 echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1 ─────────────────────${NC}"
 echo -e "$COLOR1 ${NC} ${WH}Remarks      ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}ISP & City   ${COLOR1}: ${WH}$ISP & $CITY" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${WH}ISP          ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${WH}City         ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Domain       ${COLOR1}: ${WH}${domain}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 ${NC} ${WH}Wildcard     ${COLOR1}: ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Port TLS     ${COLOR1}: ${WH}$tls" | tee -a /etc/log-create-user.log
@@ -155,7 +156,7 @@ echo -e "$COLOR1 ${NC} ${WH}Expired On   ${COLOR1}: ${WH}$exp" | tee -a /etc/log
 echo -e "$COLOR1 ─────────────────────${NC}"
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ─────────────────────${NC}"
-echo -e "$COLOR1 ${NC}    ${WH}• t.me/casperinject •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}${WH}• t.me/casperinject •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1 ─────────────────────${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
