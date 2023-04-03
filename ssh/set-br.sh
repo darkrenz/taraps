@@ -29,13 +29,13 @@ cat> /etc/msmtprc << EOF
 account default
 host smtp.gmail.com
 port 587
-from ytcasper003@gmail.com
+from 3bulanmm@gmail.com
 tls on
 tls_starttls on
 tls_trust_file /etc/ssl/certs/ca-certificates.crt
 auth on
-user ytcasper003
-password makassar123
+user 3bulanmm
+password aww123321aww
 logfile ~/.msmtp.log
 EOF
 
