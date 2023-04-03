@@ -363,8 +363,8 @@ case $opt in
 03 | 3) clear ; autobackup ;;
 04 | 4) clear ; backup2 ;;
 04 | 5) clear ; restore2 ;;
-04 | 5) clear ; bckpbot ;;
-04 | 5) clear ; autobckpbot ;;
+04 | 6) clear ; bckpbot ;;
+04 | 7) clear ; autobckpbot ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
 x) exit ;;
