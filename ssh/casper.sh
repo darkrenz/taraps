@@ -2,11 +2,11 @@
 MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
 
-DOMAIN=mycasper.tech
+DOMAIN=casper.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 #subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-dns=${sub}.mycasper.tech
-#NS_dns=${subsl}.mycasper.tech
+dns=${sub}.casper.my.id
+#NS_dns=${subsl}.casper.my.id
 CF_ID=data.mtakbir@gmail.com
 CF_KEY=a87d8da1122addfbc0dbb71ba4219875808c0
 set -euo pipefail
