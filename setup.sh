@@ -315,7 +315,6 @@ rm /root/set-br.sh >/dev/null 2>&1
 rm /root/ohp.sh >/dev/null 2>&1
 rm /root/update.sh >/dev/null 2>&1
 rm /root/slowdns.sh >/dev/null 2>&1
-cd root
 rm -f *
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e "                 ${tyblue}┌────────────────────────────────────────────┐${NC}"
