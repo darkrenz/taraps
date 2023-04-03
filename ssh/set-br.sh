@@ -35,9 +35,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user arimar.amar@gmail.com
-from arimar.amar@gmail.com
-password anggunzayddzakira
+user ytcasper003@gmail.com
+from ytcasper003@gmail.com
+password makassar123
 logfile ~/.msmtp.log
 EOF
 
