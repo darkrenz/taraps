@@ -33,9 +33,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user jambanbkn@gmail.com
-from jambanbkn@gmail.com
-password houaqlmgmqvjdxnb
+user backupsmtp93@gmail.com
+from backupsmtp93@gmail.com
+password cqtrnfqudtipqasf
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
@@ -43,7 +43,7 @@ cd /usr/bin
 wget -O autobackup "https://raw.githubusercontent.com/casper9/tarap/main/ssh/autobackup.sh"
 wget -O backup2 "https://raw.githubusercontent.com/casper9/tarap/main/ssh/backup2.sh"
 wget -O restore2 "https://raw.githubusercontent.com/casper9/tarap/main/ssh/restore2.sh"
-wget -O strt "https://raw.githubusercontent.com/casper9/SCVPS/main/backup/strt.sh"
+wget -O strt "https://raw.githubusercontent.com/casper9/permission/main/strt.sh"
 chmod +x autobackup
 chmod +x backup2
 chmod +x restore2
