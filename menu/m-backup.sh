@@ -30,6 +30,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
+Token=$(curl -sS https://pastebin.com/raw/t3aaqcej)
 Name=$(curl -sS https://raw.githubusercontent.com/casper9/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
@@ -204,7 +205,7 @@ Save_And_Exit () {
     git commit -m $NameUser &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/casper9/userbackup.git
-    git push -f https://github.com/casper9/userbackup.git &> /dev/null
+    git push -f https://$Token@github.com/casper9/userbackup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
