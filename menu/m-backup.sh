@@ -112,7 +112,6 @@ echo -e "[ ${green}INFO${NC} ] Processing... "
 mkdir -p /root/backup
 sleep 1
 elif [[ $bot == "2" ]]; then
-clear
 echo -e "[ ${green}INFO${NC} ] Processing... "
 mkdir -p /root/backup
 fi
@@ -135,7 +134,7 @@ cp -r /etc/crontab /root/backup/crontab &> /dev/null
 cd /root
 zip -r $IP.zip backup > /dev/null 2>&1
 
-curl -F chat_id="$id_chat" -F document=@"$IP.zip" -F caption="
+curl -F chat_id="$id_chat" -F document=@"$IP.zip" -F caption="Thank You For Using Our Service
 Your Domain : $domain
 Date       : $date
 Your IP VPS  : $IP" https://api.telegram.org/bot$token/sendDocument &> /dev/null
