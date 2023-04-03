@@ -99,7 +99,7 @@ domain=$(cat /etc/xray/domain)
 clear
 echo -e " 1 Buat Token Database Baru"
 echo -e " 2 SKIP BUAT TOKEN BARU"
-read -p "   Please select numbers 1-2 or Any Button(SKIP): " bot
+read -p "   Please select numbers 1-2: " bot
 echo ""
 if [[ $bot == "1" ]]; then
 rm -f /root/botapi.conf
