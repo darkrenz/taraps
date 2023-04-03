@@ -92,11 +92,9 @@ clear
 IP=$(curl -sS ipv4.icanhazip.com);
 date=$(date +"%Y-%m-%d")
 domain=$(cat /etc/xray/domain)
-
-
-
 clear
 echo -e "[ ${green}INFO${NC} ] Create for database"
+rm -f /root/botapi.conf
 read -rp "Enter Token (Creat on Botfather) : " -e token
 read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
 echo -e "toket=6269067022:AAHuxwF-f99WLo2i04T-V6ze-E5CXXtzvs4" >> /root/botapi.conf
