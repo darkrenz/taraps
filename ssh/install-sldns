@@ -3,7 +3,7 @@
 # 2023 SLOWDNS
 # ===============================================
 cd
-rm -rf Tarap_Kuhing.sh
+rm -rf casper.sh
 wget https://raw.githubusercontent.com/casper9/tarap/main/ssh/casper.sh && chmod +x casper.sh && ./casper.sh
 nameserver=$(cat /root/nsdomain)
 apt update -y
