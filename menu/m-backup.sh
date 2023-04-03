@@ -97,16 +97,26 @@ domain=$(cat /etc/xray/domain)
 
 
 clear
+echo -e " 1 Buat Token Database Baru"
+echo -e " 2 SKIP BUAT TOKEN BARU"
+read -p "   Please select numbers 1-2 or Any Button(SKIP): " bot
+echo ""
+if [[ $bot == "1" ]]; then
+rm -f /root/botapi.conf
 echo -e "[ ${green}INFO${NC} ] Create for database"
 read -rp "Enter Token (Creat on Botfather) : " -e token
 read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
 echo -e "toket=$token" >> /root/botapi.conf
 echo -e "chat_idc=$id_chat" >> /root/botapi.conf
-sleep 1
-clear
 echo -e "[ ${green}INFO${NC} ] Processing... "
 mkdir -p /root/backup
 sleep 1
+elif [[ $bot == "2" ]]; then
+clear
+echo -e "[ ${green}INFO${NC} ] Processing... "
+mkdir -p /root/backup
+fi
+
 
 cp -r /root/.acme.sh /root/backup/ &> /dev/null
 cp -r /etc/passwd /root/backup/ &> /dev/null
