@@ -78,7 +78,7 @@ clear
 cat > /etc/cron.d/bckp_otm <<-END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-0 5 * * * root /usr/bin/bckp
+0 5 * * * root /usr/bin/bckpbot
 END
 service cron restart >/dev/null 2>&1
 service cron reload >/dev/null 2>&1
@@ -340,8 +340,8 @@ echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}RESTORE V
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}BACKUP VPS TELE BOT  $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-#echo -e " $COLOR1 $NC   ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}AUTO BACKUP VPS TELE BOT$COLOR1 $NC"
-#echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}AUTO BACKUP VPS TELE BOT$COLOR1 $NC"
+echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
