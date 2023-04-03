@@ -95,6 +95,7 @@ cp -r /etc/gshadow /root/backup/ &> /dev/null
 cp -r /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
 cp -r /var/lib/ /root/backup &> /dev/null
 cp -r /etc/xray /root/backup/xray &> /dev/null
+cp -r /usr/local/etc/xray /root/backup/xray &> /dev/null
 cp -r /root/nsdomain backup/nsdomain
 cp -r /etc/slowdns backup/slowdns
 cp -r /etc/nginx/conf.d /root/backup/conf.d/ &> /dev/null
@@ -126,8 +127,4 @@ Link Backup   : $link
 Tanggal       : $date
 ==================================
 "
-echo "Jangan Lupa Dicopy/salin link diatas"
 echo "Silahkan cek Kotak Masuk $email"
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
-
