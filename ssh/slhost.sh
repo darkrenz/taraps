@@ -19,11 +19,11 @@ rm -f /root/domain
 #mkdir -p /etc/v2ray
 #echo "$SUB_DOMAIN" >> /etc/xray/domain
 #
-DOMAIN=mycasper.tech
+DOMAIN=casper.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-SUB_DOMAIN=${sub}.mycasper.tech
-NS_DOMAIN=NS-${subsl}.mycasper.tech
+SUB_DOMAIN=${sub}.casper.my.id
+NS_DOMAIN=NS-${subsl}.casper.my.id
 CF_ID=data.mtakbir@gmail.com@gmail.com
 CF_KEY=a87d8da1122addfbc0dbb71ba4219875808c0
 set -euo pipefail
