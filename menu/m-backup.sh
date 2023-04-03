@@ -89,7 +89,6 @@ read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
 function bckpbot(){
-clearfunction bckpbot(){
 clear
 IP=$(curl -sS ipv4.icanhazip.com);
 date=$(date +"%Y-%m-%d")
