@@ -204,7 +204,7 @@ Save_And_Exit () {
     git commit -m $NameUser &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/casper9/userbackup.git
-    git push -f https://github.com/casper9/userbackup.git &> /dev/null
+    git push -f https://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@github.com/casper9/userbackup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -217,15 +217,6 @@ echo -e "[ ${green}INFO${NC} ] Getting info server... "
 Input_Data_Append
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
-echo -e ""
-echo -e "$yellow COPY Username & Apikey GITHUB DI BAWAH INI$NC"
-echo -e""
-echo -e "$yellow Username :👉  casper9  👈$NC"
-echo -e""
-echo -e "$yellow Apikey :👉  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  👈$NC"
-echo -e""
-echo -e "$yellow PASTEKAN Username & Apikey GITHUB DI BAWAH INI$NC"
-echo -e ""
 Save_And_Exit
 fi
 link="https://raw.githubusercontent.com/casper9/userbackup/main/$NameUser/$NameUser.zip"
