@@ -218,12 +218,6 @@ echo -e "[ ${green}INFO${NC} ] Getting info server... "
 Input_Data_Append
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
-echo -e ""
-echo -e "$yellow COPY Username GITHUB DI BAWAH INI$NC"
-echo -e""
-echo -e "$yellow Username :👉  casper9/ghp@6l3gChyb1bKtquZreiz7ApYsoO9Odl1sXB2t  👈$NC"
-echo -e""
-echo -e "$yellow PASTEKAN Username GITHUB DI BAWAH INI$NC"
 Save_And_Exit
 fi
 link="https://raw.githubusercontent.com/casper9/userbackup/main/$NameUser/$NameUser.zip"
