@@ -92,6 +92,7 @@ rm -rf restore2
 rm -rf backup2
 rm -rf autobackup
 rm -rf slowdns
+rm -rf bckpbot
 
 # download menu
 cd /usr/bin
@@ -152,6 +153,7 @@ rm -rf restore2
 rm -rf backup2
 rm -rf autobackup
 rm -rf slowdns
+rm -rf bckpbot
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/casper9/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/casper9/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -212,6 +214,7 @@ wget -O /usr/bin/restore2 "https://raw.githubusercontent.com/casper9/tarap/main/
 wget -O /usr/bin/ws-dropbear "https://raw.githubusercontent.com/casper9/tarap/main/sshws/ws-dropbear" && chmod +x /usr/bin/ws-dropbear
 wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/casper9/tarap/main/ssh/autobackup.sh" && chmod +x /usr/bin/autobackup
 wget -O /usr/bin/slowdns "https://raw.githubusercontent.com/casper9/Slowdns/main/slowdns" && chmod +x /usr/bin/slowdns
+wget -q -O /usr/bin/bckpbot "https://raw.githubusercontent.com/casper9/tarap/main/ssh/bckpbot.sh" && chmod +x /usr/bin/bckpbot
 chmod +x menu
 chmod +x m-vmess
 chmod +x m-vless
@@ -270,6 +273,7 @@ chmod +x backup2
 chmod +x restore2
 chmod +x autobackup
 chmod +x slowdns
+chmod +x bckpbot
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
