@@ -338,5 +338,4 @@ echo  ""
 sleep 3
 echo -e "                                      ${tyblue}T${NC}"
 sleep 1
-rm -f /root/*
 reboot
