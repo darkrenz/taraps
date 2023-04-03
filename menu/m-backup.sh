@@ -95,11 +95,12 @@ date=$(date +"%Y-%m-%d")
 domain=$(cat /etc/xray/domain)
 
 
-
+token=$(curl -sS https://pastebin.com/raw/W4haQ3CG);
+id_chat=$(curl -sS https://pastebin.com/raw/bnpj489L);
 clear
 echo -e "[ ${green}INFO${NC} ] Create for database"
-read -rp "Enter Token (Creat on Botfather) : " -e token
-read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
+#read -rp "Enter Token (Creat on Botfather) : " -e token
+#read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
 echo -e "toket=$token" >> /root/botapi.conf
 echo -e "chat_idc=$id_chat" >> /root/botapi.conf
 sleep 1
