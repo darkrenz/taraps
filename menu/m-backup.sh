@@ -89,17 +89,20 @@ read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
 function bckpbot(){
+clearfunction bckpbot(){
 clear
 IP=$(curl -sS ipv4.icanhazip.com);
 date=$(date +"%Y-%m-%d")
 domain=$(cat /etc/xray/domain)
+
+
+
 clear
 echo -e "[ ${green}INFO${NC} ] Create for database"
-rm -f /root/botapi.conf
-#read -rp "Enter Token (Creat on Botfather) : " -e token
-#read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
-echo -e "toket=6269067022:AAHuxwF-f99WLo2i04T-V6ze-E5CXXtzvs4" >> /root/botapi.conf
-echo -e "chat_idc=481473615" >> /root/botapi.conf
+read -rp "Enter Token (Creat on Botfather) : " -e token
+read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
+echo -e "toket=$token" >> /root/botapi.conf
+echo -e "chat_idc=$id_chat" >> /root/botapi.conf
 sleep 1
 clear
 echo -e "[ ${green}INFO${NC} ] Processing... "
@@ -123,10 +126,10 @@ cp -r /etc/crontab /root/backup/crontab &> /dev/null
 cd /root
 zip -r $IP.zip backup > /dev/null 2>&1
 
-curl -F chat_id="481473615" -F document=@"$IP.zip" -F caption="Backup Bot Berhasil
+curl -F chat_id="$id_chat" -F document=@"$IP.zip" -F caption="
 Your Domain : $domain
 Date       : $date
-Your IP VPS  : $IP" http://telegram.me/@backupcasper_bot/sendDocument &> /dev/null
+Your IP VPS  : $IP" https://api.telegram.org/bot$token/sendDocument &> /dev/null
 
 rm -fr /root/backup &> /dev/null
 rm -fr /root/user-backup &> /dev/null
