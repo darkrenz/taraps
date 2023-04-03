@@ -72,7 +72,74 @@ red "Permission Denied!"
 exit 0
 fi
 clear
+function autobckpbot(){
+clear
+cat > /etc/cron.d/bckp_otm <<-END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+0 5 * * * root /usr/bin/bckp
+END
+service cron restart >/dev/null 2>&1
+service cron reload >/dev/null 2>&1
 
+echo -e "${BIGreen}Auto Backup Start  Daily 05.00 AM${NC} "
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
+}
+function bckpbot(){
+clear
+IP=$(curl -sS ipv4.icanhazip.com);
+date=$(date +"%Y-%m-%d")
+domain=$(cat /etc/xray/domain)
+
+
+
+clear
+echo -e "[ ${green}INFO${NC} ] Create for database"
+read -rp "Enter Token (Creat on Botfather) : " -e token
+read -rp "Enter Chat id, Channel, Group Or Your Id  : " -e id_chat
+echo -e "toket=$token" >> /root/botapi.conf
+echo -e "chat_idc=$id_chat" >> /root/botapi.conf
+sleep 1
+clear
+echo -e "[ ${green}INFO${NC} ] Processing... "
+mkdir -p /root/backup
+sleep 1
+
+cp -r /root/.acme.sh /root/backup/ &> /dev/null
+cp -r /etc/passwd /root/backup/ &> /dev/null
+cp -r /etc/group /root/backup/ &> /dev/null
+cp -r /etc/shadow /root/backup/ &> /dev/null
+cp -r /etc/gshadow /root/backup/ &> /dev/null
+cp -r /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
+cp -r /var/lib/ /root/backup &> /dev/null
+cp -r /etc/xray /root/backup/xray &> /dev/null
+cp -r /root/nsdomain backup/nsdomain &> /dev/null
+cp -r /etc/slowdns backup/slowdns &> /dev/null
+cp -r /etc/nginx/conf.d /root/backup/conf.d/ &> /dev/null
+cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
+cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
+cp -r /etc/crontab /root/backup/crontab &> /dev/null
+cd /root
+zip -r $IP.zip backup > /dev/null 2>&1
+
+curl -F chat_id="$id_chat" -F document=@"$IP.zip" -F caption="Thank You For Using Our Service
+Your Domain : $domain
+Date       : $date
+Your IP VPS  : $IP" https://api.telegram.org/bot$token/sendDocument &> /dev/null
+
+rm -fr /root/backup &> /dev/null
+rm -fr /root/user-backup &> /dev/null
+rm -f /root/$NameUser.zip &> /dev/null
+rm -f /root/$IP.zip &> /dev/null
+
+echo " Please Check Your BOT"
+echo -e ""
+
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
+}
 function backup(){
 clear
 IP=$(curl -sS ipv4.icanhazip.com);
@@ -278,6 +345,10 @@ echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}BACKUP VP
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}RESTORE VPS  $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}BACKUP VPS TELE BOT  $COLOR1 $NC"
+echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}AUTO BACKUP VPS TELE BOT$COLOR1 $NC"
+echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
@@ -292,6 +363,8 @@ case $opt in
 03 | 3) clear ; autobackup ;;
 04 | 4) clear ; backup2 ;;
 04 | 5) clear ; restore2 ;;
+04 | 5) clear ; bckpbot ;;
+04 | 5) clear ; autobckpbot ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
 x) exit ;;
