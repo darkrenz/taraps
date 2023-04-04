@@ -32,6 +32,23 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear
+function ins-helium(){
+clear
+if [[ -e /usr/local/sbin/helium ]]; then
+     echo ""
+     echo -e "${green}Ads Block Already Install${NC}"
+     echo ""
+	 read -n1 -r -p "Press any key to continue..."
+	 menu
+else
+
+rm -rf /usr/local/sbin/helium
+wget -q -O /usr/local/sbin/helium https://cdn.discordapp.com/attachments/1043809011474112566/1054014513428566016/helium.sh
+chmod +x /usr/local/sbin/helium
+helium
+
+fi
+}
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SYSTEM MENU •                 ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -43,7 +60,7 @@ echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}SPEEDTEST   ${WH}     
 #echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}AUTO REBOOT   ${WH}   ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}SET BANNER  ${WH}        $COLOR1 $NC"
 #echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}RESTART VPS   ${WH}   ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}SLOW DNS ${WH}        $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}RESTART VPS   ${WH}   ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}INSTALL ADBLOCK ${WH}        $COLOR1 $NC"
 #echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK BANDWITH  ${WH}   ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}DNS ${WH}                $COLOR1 $NC"
 #echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
@@ -63,7 +80,7 @@ case $opt in
 07 |7) clear ; webmin ; exit ;;
 08 |8) clear ; limitspeed ; exit ;;
 09 |9) clear ; nano /etc/issue.net ; exit ;;
-10 |10) clear ; slowdns ;;
+10 |10) clear ; ins-helium ;;
 11 |11) clear ; m-dns ; exit ;;
 12 |12) clear ; certv2ray ; exit ;;
 13 |13) clear ; clearcache ; exit ;;
