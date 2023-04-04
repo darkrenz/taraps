@@ -93,6 +93,8 @@ rm -rf backup2
 rm -rf autobackup
 rm -rf slowdns
 rm -rf bckpbot
+rm -rf list-trojan
+rm -rf list-vmess
 
 # download menu
 cd /usr/bin
@@ -154,6 +156,8 @@ rm -rf backup2
 rm -rf autobackup
 rm -rf slowdns
 rm -rf bckpbot
+rm -rf list-trojan
+rm -rf list-vmess
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/casper9/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/casper9/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -214,7 +218,10 @@ wget -O /usr/bin/restore2 "https://raw.githubusercontent.com/casper9/tarap/main/
 wget -O /usr/bin/ws-dropbear "https://raw.githubusercontent.com/casper9/tarap/main/sshws/ws-dropbear" && chmod +x /usr/bin/ws-dropbear
 wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/casper9/tarap/main/ssh/autobackup.sh" && chmod +x /usr/bin/autobackup
 wget -O /usr/bin/slowdns "https://raw.githubusercontent.com/casper9/Slowdns/main/slowdns" && chmod +x /usr/bin/slowdns
-wget -q -O /usr/bin/bckpbot "https://raw.githubusercontent.com/casper9/tarap/main/ssh/bckpbot.sh" && chmod +x /usr/bin/bckpbot
+wget -O /usr/bin/bckpbot "https://raw.githubusercontent.com/casper9/tarap/main/ssh/bckpbot.sh" && chmod +x /usr/bin/bckpbot
+wget -O /usr/bin/list-trojan "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-trojan.sh" && chmod +x /usr/bin/list-trojan
+wget -O /usr/bin/list-vmess "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-vmess.sh" && chmod +x /usr/bin/list-vmess
+
 chmod +x menu
 chmod +x m-vmess
 chmod +x m-vless
@@ -274,6 +281,8 @@ chmod +x restore2
 chmod +x autobackup
 chmod +x slowdns
 chmod +x bckpbot
+chmod +x list-trojan
+chmod +x list-vmess
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
