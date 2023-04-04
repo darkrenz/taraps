@@ -70,7 +70,7 @@ red "Permission Denied!"
 exit 0
 fi
 
-function listuser(){
+function listvmess(){
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess Ws None Tls" | cut -d: -f2|sed 's/ //g')"
@@ -96,6 +96,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vms " "/usr/local/etc/xray/vmess.json")
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
+clear
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
@@ -225,7 +226,7 @@ case $opt in
 03 | 3) clear ; renew-vmess ;;
 04 | 4) clear ; del-vmess ;;
 05 | 5) clear ; cek-vmess ;;
-06 | 6) clear ; listuser ;;
+06 | 6) clear ; lisvmess ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-vmess ;;
 esac
