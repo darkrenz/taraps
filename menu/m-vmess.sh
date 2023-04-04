@@ -70,7 +70,7 @@ red "Permission Denied!"
 exit 0
 fi
 
-function listvmess(){
+function list-vmess(){
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess Ws None Tls" | cut -d: -f2|sed 's/ //g')"
@@ -200,7 +200,7 @@ echo -e "$COLOR1 ${NC}   ${WH}• t.me/casperinject •${NC}                 $CO
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
-menu
+m-vmess
 }
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -226,7 +226,7 @@ case $opt in
 03 | 3) clear ; renew-vmess ;;
 04 | 4) clear ; del-vmess ;;
 05 | 5) clear ; cek-vmess ;;
-06 | 6) clear ; lisvmess ;;
+06 | 6) clear ; list-vmess ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-vmess ;;
 esac
