@@ -65,6 +65,8 @@ wget -q -O /usr/bin/backup2 "https://raw.githubusercontent.com/casper9/tarap/mai
 wget -q -O /usr/bin/restore2 "https://raw.githubusercontent.com/casper9/tarap/main/ssh/restore2.sh" && chmod +x /usr/bin/restore2
 wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/casper9/tarap/main/speedtest_cli.py" && chmod +x /usr/bin/speedtest
 wget -q -O /usr/bin/bckpbot "https://raw.githubusercontent.com/casper9/tarap/main/ssh/bckpbot.sh" && chmod +x /usr/bin/bckpbot
+wget -q -O /usr/bin/list-trojan "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-trojan.sh" && chmod +x /usr/bin/list-trojan
+wget -q -O /usr/bin/list-vmess "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-vmess.sh" && chmod +x /usr/bin/list-vmess
 echo -e " [INFO] Download File Successfully"
 sleep 2
 exit
