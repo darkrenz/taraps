@@ -1,7 +1,7 @@
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess Ws None Tls" | cut -d: -f2|sed 's/ //g')"
-NUMBER_OF_CLIENTS=$(grep -c -E "^#vmessgrpc " "/etc/xray/config.json")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
@@ -15,7 +15,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vmessgrpc " "/etc/xray/config.json")
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
 	echo -e "==============================="
-	grep -E "^#vmessgrpc " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
+	grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "Select one client [1]: " CLIENT_NUMBER
