@@ -34,7 +34,7 @@ fi
 clear
 function ins-helium(){
 clear
-if [[ -e /usr/local/sbin/helium ]]; then
+if [[ -e /usr/bin/ins-helium ]]; then
      echo ""
      echo -e "${green}Ads Block Already Install${NC}"
      echo ""
@@ -42,9 +42,8 @@ if [[ -e /usr/local/sbin/helium ]]; then
 	 menu
 else
 
-rm -rf /usr/local/sbin/helium
-wget -q -O /usr/local/sbin/helium https://cdn.discordapp.com/attachments/1043809011474112566/1054014513428566016/helium.sh
-chmod +x /usr/local/sbin/helium
+rm -rf /usr/bin/ins-helium
+wget -q -O /usr/bin/ins-helium "https://raw.githubusercontent.com/vinstechmy/AdsBlock/main/ins-helium.sh" && chmod +x /usr/bin/ins-helium && ins-heliumchmod +x /usr/local/sbin/helium
 helium
 
 fi
