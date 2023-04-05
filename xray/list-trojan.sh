@@ -23,7 +23,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#tr " "/etc/xray/config.json")
         fi
 
 	echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        echo -e "\E[44;1;39m          ⇱ Check XRAY Trojan Config         \E[0m"
+        echo -e "\E[44;1;39m          ⇱ Check XRAY Trojan Config ⇲        \E[0m"
         echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         echo " Select the existing client to view the config"
         echo " Press CTRL+C to return"
