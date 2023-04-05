@@ -80,7 +80,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#ss " "/etc/xray/config.json")
 		echo ""
 		echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC"
                 read -n 1 -s -r -p "Press any key to back on menu"
-        m-ssww
+        m-ssws
 
         fi
 
