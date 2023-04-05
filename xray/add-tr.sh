@@ -115,6 +115,8 @@ clear
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+sed -i '/#trojan$/a\#tr '"$user $exp"'\
+},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/trojan.json
 sed -i '/#trojanws$/a\#! '"$user $exp"'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
