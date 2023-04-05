@@ -114,6 +114,46 @@ cat > /etc/xray/config.json << END
           }
         }
      },
+   {
+     "listen": "127.0.0.1",
+     "port": "140160",
+     "protocol": "vless",
+      "settings": {
+          "decryption":"none",
+            "clients": [
+               {
+                 "id": "${uuid}"
+#cfvless
+             }
+          ]
+       },
+       "streamSettings":{
+         "network": "ws",
+            "wsSettings": {
+                "path": "/cfvless"
+          }
+        }
+     },
+     {
+     "listen": "127.0.0.1",
+     "port": "234560",
+     "protocol": "vmess",
+      "settings": {
+            "clients": [
+               {
+                 "id": "${uuid}",
+                 "alterId": 0
+#cfvmess
+             }
+          ]
+       },
+       "streamSettings":{
+         "network": "ws",
+            "wsSettings": {
+                "path": "/cfvmess"
+          }
+        }
+     },
      {
      "listen": "127.0.0.1",
      "port": "23456",
@@ -174,6 +214,48 @@ cat > /etc/xray/config.json << END
                "path": "/trojan-ws"
             }
          }
+     },
+    {
+      "listen": "127.0.0.1",
+      "port": "254320",
+      "protocol": "trojan",
+      "settings": {
+          "decryption":"none",
+           "clients": [
+              {
+                 "password": "${uuid}"
+#cftrojan
+              }
+          ],
+         "udp": true
+       },
+       "streamSettings":{
+           "network": "ws",
+           "wsSettings": {
+               "path": "/cftrojan-ws"
+            }
+         }
+     },
+    {
+         "listen": "127.0.0.1",
+        "port": "303000",
+        "protocol": "shadowsocks",
+        "settings": {
+           "clients": [
+           {
+           "method": "aes-128-gcm",
+          "password": "${uuid}"
+#cfssws
+           }
+          ],
+          "network": "tcp,udp"
+       },
+       "streamSettings":{
+          "network": "ws",
+             "wsSettings": {
+               "path": "/cfss-ws"
+           }
+        }
      },
     {
          "listen": "127.0.0.1",
