@@ -141,4 +141,4 @@ echo -e "$COLOR1└────────────────────�
 echo "";
 read -n 1 -s -r -p "Press any key to back on menu"
 
-m-ssh
+m-sshovpn
