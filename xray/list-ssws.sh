@@ -79,7 +79,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#ss " "/etc/xray/config.json")
 		echo "You have no existing clients!"
 		echo ""
 		echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC"
-                exit 1
+                read -n 1 -s -r -p "Press any key to back on menu"
+        m-ssww
+
         fi
 
 	echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC"
