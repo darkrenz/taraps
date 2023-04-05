@@ -79,9 +79,9 @@ user=trialcasper`</dev/urandom tr -dc X-Z-0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#trojanws$/a\#! '"$user $exp"'\
+sed -i '/#trojanws$/a\#tr '"$user $exp $uuid"'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
+sed -i '/#trojangrpc$/a\#trg '"$user $exp"'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 
 systemctl restart xray
