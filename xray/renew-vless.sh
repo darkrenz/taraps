@@ -112,7 +112,7 @@ sed -i "s/#vlg $user $exp/#vlg $user $exp4/g" /etc/xray/config.json
 systemctl restart xray > /dev/null 2>&1
 clear
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    echo " Trojan Account Was Successfully Renewed"
+    echo " VLESS Account Was Successfully Renewed"
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
     echo " Client Name : $user"
