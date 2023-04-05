@@ -38,7 +38,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vl " "/etc/xray/config.json")
         m-ssws
 	fi
  	echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        echo -e "\\E[0;41;36m            ⇱ Renew Shadowsocks ⇲             \E[0m"
+        echo -e "\\E[0;41;36m            ⇱ Renew Vless ⇲             \E[0m"
         echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
