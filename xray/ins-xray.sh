@@ -96,7 +96,7 @@ cat > /etc/xray/config.json << END
     },
    {
      "listen": "127.0.0.1",
-     "port": "14016",
+     "port": "01",
      "protocol": "vless",
       "settings": {
           "decryption":"none",
@@ -116,7 +116,7 @@ cat > /etc/xray/config.json << END
      },
      {
      "listen": "127.0.0.1",
-     "port": "01",
+     "port": "02",
      "protocol": "vmess",
       "settings": {
             "clients": [
@@ -135,14 +135,14 @@ cat > /etc/xray/config.json << END
         }
      },
     {
-     "listen": "127.0.0.1",
-     "port": "02",
-     "protocol": "vmess",
+      "listen": "127.0.0.1",
+      "port": "03",
+      "protocol": "trojan",
       "settings": {
-            "clients": [
-               {
-                 "id": "${uuid}",
-                 "alterId": 0
+          "decryption":"none",
+           "clients": [
+              {
+                 "password": "${uuid}"
 #cftrojan
               }
           ],
@@ -157,7 +157,7 @@ cat > /etc/xray/config.json << END
      },
     {
          "listen": "127.0.0.1",
-        "port": "03",
+        "port": "04",
         "protocol": "shadowsocks",
         "settings": {
            "clients": [
@@ -177,14 +177,14 @@ cat > /etc/xray/config.json << END
         }
      },
       {
-        "listen": "127.0.0.1",
-     "port": "04",
-        "protocol": "vless",
-        "settings": {
-         "decryption":"none",
-           "clients": [
-             {
-               "id": "${uuid}"
+     "listen": "127.0.0.1",
+     "port": "14016",
+     "protocol": "vless",
+      "settings": {
+          "decryption":"none",
+            "clients": [
+               {
+                 "id": "${uuid}"
 #vless
              }
           ]
