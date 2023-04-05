@@ -82,9 +82,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vmg " "/etc/xray/config.json")
 		echo "You have no existing clients!"
 		echo ""
 		echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-                exit 1
+                read -n 1 -s -r -p "Press any key to back on menu"
+        m-vmess
 	fi
-
 	clear
 	echo ""
 	echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
