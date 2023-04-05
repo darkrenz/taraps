@@ -95,6 +95,9 @@ rm -rf slowdns
 rm -rf bckpbot
 rm -rf list-trojan
 rm -rf list-vmess
+rm -rf list-vless
+rm -rf list-ssws
+
 
 # download menu
 cd /usr/bin
@@ -158,6 +161,8 @@ rm -rf slowdns
 rm -rf bckpbot
 rm -rf list-trojan
 rm -rf list-vmess
+rm -rf list-vless
+rm -rf list-ssws
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/casper9/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/casper9/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -221,6 +226,8 @@ wget -O /usr/bin/slowdns "https://raw.githubusercontent.com/casper9/Slowdns/main
 wget -O /usr/bin/bckpbot "https://raw.githubusercontent.com/casper9/tarap/main/ssh/bckpbot.sh" && chmod +x /usr/bin/bckpbot
 wget -O /usr/bin/list-trojan "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-trojan.sh" && chmod +x /usr/bin/list-trojan
 wget -O /usr/bin/list-vmess "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-vmess.sh" && chmod +x /usr/bin/list-vmess
+wget -q -O /usr/bin/list-vless "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-vless.sh" && chmod +x /usr/bin/list-vless
+wget -q -O /usr/bin/list-ssws "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-ssws.sh" && chmod +x /usr/bin/list-ssws
 
 chmod +x menu
 chmod +x m-vmess
@@ -283,6 +290,8 @@ chmod +x slowdns
 chmod +x bckpbot
 chmod +x list-trojan
 chmod +x list-vmess
+chmod +x list-vless
+chmod +x list-ssws
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
