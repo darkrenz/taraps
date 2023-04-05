@@ -36,7 +36,6 @@ echo -e " [\e[36m•7\e[0m] Restart Nginx"
 echo -e " [\e[36m•8\e[0m] Restart Badvpn"
 echo -e " [\e[36m•9\e[0m] Restart XRAY"
 echo -e " [\e[36m10\e[0m] Restart WEBSOCKET"
-echo -e " [\e[36m11\e[0m] Restart Trojan Go"
 echo -e ""
 echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
 echo -e   ""
@@ -201,7 +200,9 @@ case $Restart in
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
                 sleep 1
                 echo -e "[ \033[32mok\033[0m ] Restarting badvpn Service (via systemctl) "
-                screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
+                systemctl restart badvpn1 
+                systemctl restart badvpn2 
+                systemctl restart badvpn3
                 sleep 0.5
                 echo -e "[ \033[32mInfo\033[0m ] Badvpn Service Restarted"
                 echo ""
@@ -250,25 +251,6 @@ case $Restart in
                 read -n 1 -s -r -p "Press any key to back on system menu"
                 restart
                 ;;
-                11)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                echo -e "[ \033[32mok\033[0m ] Restarting Trojan Go Service (via systemctl) "
-                sleep 0.5
-                systemctl restart trojan-go.service
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] Trojan Go Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restart
-                ;;
                 0)
                 menu
                 exit
@@ -277,5 +259,5 @@ case $Restart in
                 clear
                 exit
                 ;;
-                *) echo -e "" ; echo "Boh salah tekan, Sayang kedak Babi" ; sleep 1 ; restart ;;
+                *) echo -e "" ; echo "Anda Salah Tekan" ; sleep 1 ; restart ;;
         esac
