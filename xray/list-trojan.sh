@@ -79,8 +79,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#tr " "/etc/xray/config.json")
 		echo "You have no existing clients!"
 		echo ""
 		echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-                exit 1
-        fi
+                read -n 1 -s -r -p "Press any key to back on menu"
+        m-trojan
+	fi
 
 	echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         echo -e "$COLOR1 ${NC} ${COLBG1}          ⇱ Check XRAY Trojan Config ⇲        ${NC} $COLOR1 $NC"
