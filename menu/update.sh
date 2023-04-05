@@ -67,6 +67,8 @@ wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/casper9/tarap/m
 wget -q -O /usr/bin/bckpbot "https://raw.githubusercontent.com/casper9/tarap/main/ssh/bckpbot.sh" && chmod +x /usr/bin/bckpbot
 wget -q -O /usr/bin/list-trojan "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-trojan.sh" && chmod +x /usr/bin/list-trojan
 wget -q -O /usr/bin/list-vmess "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-vmess.sh" && chmod +x /usr/bin/list-vmess
+wget -q -O /usr/bin/list-vless "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-vless.sh" && chmod +x /usr/bin/list-vless
+wget -q -O /usr/bin/list-ssws "https://raw.githubusercontent.com/casper9/tarap/main/xray/list-ssws.sh" && chmod +x /usr/bin/list-ssws
 echo -e " [INFO] Download File Successfully"
 sleep 2
 exit
