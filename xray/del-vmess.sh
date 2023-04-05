@@ -12,7 +12,7 @@ red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 
 
 clear
-NUMBER_OF_CLIENTS=$(grep -c -E "^vm " "/etc/xray/config.json")
+NUMBER_OF_CLIENTS=$(grep -c -E "^vmg " "/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         echo -e "\E[44;1;39m     ⇱ Delete Vmess Account ⇲      \E[0m"
