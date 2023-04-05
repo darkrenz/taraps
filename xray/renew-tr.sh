@@ -65,7 +65,7 @@ sed -i "s/#trg $user $exp/#trg $user $exp4/g" /etc/xray/config.json
 systemctl restart xray > /dev/null 2>&1
 clear
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo " Shadowsocks Account Was Successfully Renewed"
+    echo " Trojan Account Was Successfully Renewed"
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo ""
     echo " Client Name : $user"
