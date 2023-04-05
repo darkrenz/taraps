@@ -73,8 +73,9 @@ clear
 clear
 clear
 clear
-ISP=$(curl -s ipinfo.io/org?token=b3d3519c9991d1 | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city?token=b3d3519c9991d1 )
+ipn=$(curl -s https://pastebin.com/raw/MPzxzcus)
+ISP=$(curl -s ipinfo.io/org?token=$ipn | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city?token=$ipn )
 domain=$(cat /etc/xray/domain)
 tls="$(cat ~/log-install.txt | grep -w "Vless WS TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless WS none TLS" | cut -d: -f2|sed 's/ //g')"
