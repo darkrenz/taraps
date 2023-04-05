@@ -13,7 +13,7 @@ red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess Ws None Tls" | cut -d: -f2|sed 's/ //g')"
-NUMBER_OF_CLIENTS=$(grep -c -E "^#vm " "/etc/xray/config.json")
+NUMBER_OF_CLIENTS=$(grep -c -E "^#vmg " "/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
                 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -35,7 +35,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vm " "/etc/xray/config.json")
         echo " Press CTRL+C to return"
         echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         echo "     No  Expired   User"
-	grep -E "^#vm " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
+	grep -E "^#vmg " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "Select one client [1]: " CLIENT_NUMBER
@@ -46,10 +46,10 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vm " "/etc/xray/config.json")
 clear
 ISP=$(curl -s ipinfo.io/org?token=b3d3519c9991d1 | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city?token=b3d3519c9991d1 )
-user=$(grep -E "^#vm " "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+user=$(grep -E "^#vmg " "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 domain=$(cat /etc/xray/domain)
 uuid=$(grep "},{" /etc/xray/config.json | cut -b 11-46 | sed -n "${CLIENT_NUMBER}"p)
-exp=$(grep -E "^#vm " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
+exp=$(grep -E "^#vmg " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 asu=`cat<<EOF
       {
       "v": "2",
