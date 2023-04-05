@@ -82,8 +82,9 @@ slkey=`cat /etc/slowdns/server.pub`
 #slkey1=`cat /root/server.pub`
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
-ISP=$(curl -s ipinfo.io/org?token=b3d3519c9991d1 | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city?token=b3d3519c9991d1 )
+ipn=$(curl -s https://pastebin.com/raw/MPzxzcus)
+ISP=$(curl -s ipinfo.io/org?token=$ipn | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city?token=$ipn )
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SSH PANEL MENU •              ${NC} $COLOR1 $NC"
