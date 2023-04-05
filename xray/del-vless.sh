@@ -36,7 +36,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vl " "/etc/xray/config.json")
 
 	clear
         echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-        echo -e ""$COLOR1 ${NC} ${COLBG1}     ⇱ Delete Vless Account ⇲      ${NC} $COLOR1 $NC"
+        echo -e "$COLOR1 ${NC} ${COLBG1}     ⇱ Delete Vless Account ⇲      ${NC} $COLOR1 $NC"
       	echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
