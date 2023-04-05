@@ -76,7 +76,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD SSWS${NC}      ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE SSWS${NC}     $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}RENEW SSWS${NC}    ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}USER ONLINE${NC}     $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}TRIAL SSWS${NC}"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}TRIAL SSWS${NC}    ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}CHECK CONFIG SSWS${NC}     $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
@@ -91,6 +91,7 @@ case $opt in
 03 | 3) clear ; renew-ssws ;;
 04 | 4) clear ; del-ssws ;;
 05 | 5) clear ; cek-ssws ;;
+06 | 6) clear ; list-ssws ;;
 00 | 0) clear ; menu ;;
 x) exit ;;
 *) echo "salah tekan" ; sleep 1 ; m-ssws ;;
