@@ -99,8 +99,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#tr " "/etc/xray/config.json")
                 fi
         done
 clear
-ISP=$(curl -s ipinfo.io/org?token=b3d3519c9991d1 | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city?token=b3d3519c9991d1 )
+ipn=$(curl -s https://pastebin.com/raw/MPzxzcus)
+ISP=$(curl -s ipinfo.io/org?token=$ipn | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city?token=$ipn )
 user=$(grep -E "^#tr " "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 domain=$(cat /etc/xray/domain)
 uuid=$(grep -E "^#tr " "/etc/xray/config.json" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
