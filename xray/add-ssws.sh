@@ -106,7 +106,7 @@ cipher="aes-128-gcm"
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#ssws$/a\#ss '"$user $exp"'\
+sed -i '/#ssws$/a\#ss '"$user $exp $uuid"'\
 },{"password": "'""$uuid""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#ssgrpc$/a\#ssg '"$user $exp"'\
 },{"password": "'""$uuid""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
