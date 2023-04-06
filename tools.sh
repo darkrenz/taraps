@@ -15,8 +15,8 @@ elif [[ -e /etc/centos-release ]]; then
 	OS=centos
 fi
 
-echo "           ${tyblue}Tools install...!${NC}"
-echo "                  \e[1;33mProgress...\e[0m"
+echo "           Tools install...!"
+echo "             Progress..."
 sleep 0.5
 
 sudo apt update -y
