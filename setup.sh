@@ -112,7 +112,7 @@ mkdir -p /etc/casper/theme
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 echo ""
-wget -q https://raw.githubusercontent.com/casper9/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/casper9/tarap/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 echo ""
