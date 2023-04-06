@@ -90,7 +90,6 @@ sed -i '/#vlessgrpc$/a\#vlg '"$user $exp"'\
 vlesslink1="vless://${uuid}@${domain}:$tls?path=/vless&security=tls&encryption=none&host=$sni&type=ws&sni=$sni#${user}"
 vlesslink2="vless://${uuid}@${domain}:80?path=/vless&security=none&encryption=none&host=$sni&type=ws#${user}"
 vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=$sni#${user}"
-systemctl restart xray
 clear
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}    ${COLBG1}${WH}• TRIAL VLESS •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
