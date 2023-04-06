@@ -123,7 +123,6 @@ sed -i '/#trojangrpc$/a\#trg '"$user $exp"'\
 
 trojanlink1="trojan://${uuid}@${domain}:${tls}?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=${domain}#${user}"
 trojanlink="trojan://${uuid}@${domain}:${tls}?path=%2Ftrojan-ws&security=tls&host=$sni&type=ws&sni=${domain}#${user}"
-systemctl restart xray
 clear
 clear
 clear
